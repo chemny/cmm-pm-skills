@@ -37,12 +37,10 @@
 
 ## 安装 / Install（Claude Code）
 ```bash
-claude plugin marketplace add <本仓库地址>
-claude plugin install pm-market-research@cmm-pm-skills
-claude plugin install pm-product-discovery@cmm-pm-skills
-claude plugin install pm-product-strategy@cmm-pm-skills
-claude plugin install pm-execution@cmm-pm-skills
-# 其余：pm-go-to-market / pm-data-analytics / pm-marketing-growth / pm-ai-shipping / pm-toolkit
+claude plugin marketplace add chemny/cmm-pm-skills && \
+for p in pm-market-research pm-product-discovery pm-product-strategy pm-execution \
+         pm-go-to-market pm-data-analytics pm-marketing-growth pm-ai-shipping pm-toolkit; \
+do claude plugin install $p@cmm-pm-skills; done
 ```
 
 ## 快速开始 / Quick Start
