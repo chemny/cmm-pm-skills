@@ -1,12 +1,18 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cmm-pm-skills",
-  "version": "0.2.0",
-  "description": "CMM 自研产品经理工作流。端到端流水线 ①市场→②洞察→③战略→④PRD→⑤设计→⑥技术方案→⑦故事→⑧测试→⑩上线→⑪数据；统一纪律见 CONVENTIONS.md。",
+  "version": "0.3.0",
+  "description": "CMM 自研产品经理工作流。总协同 /cmm-pm 统筹端到端流水线 ①市场→②洞察→③战略→④PRD→⑤设计→⑥技术方案→⑦故事→⑧测试→⑩上线→⑪数据；统一纪律见 CONVENTIONS.md。",
   "owner": {
     "name": "CMM"
   },
   "plugins": [
+    {
+      "name": "pm-console",
+      "description": "cmm-pm-skills 总协同 (/cmm-pm): 为产品项目建/读项目台账，显示流水线进度，按阶段守门（风险结论→用户拍板），引导下一步该敲哪个阶段命令。零侵入、不硬调用其它插件命令。",
+      "source": "./pm-console",
+      "category": "product-management"
+    },
     {
       "name": "pm-product-discovery",
       "description": "Product discovery skills for PMs: ideation, experiments, assumption testing, feature prioritization, and customer interview synthesis.",

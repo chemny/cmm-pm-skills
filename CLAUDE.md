@@ -33,10 +33,11 @@ pm-skills/                           <- repo root
     └── README.md                    <- per-plugin documentation
 ```
 
-### The 9 plugins
+### The 10 plugins
 
 | Plugin | Focus |
 |--------|-------|
+| `pm-console` | **Suite-level orchestrator** (`/cmm-pm`): per-project state ledger (`_runs/<project>/_state.yaml`), progress board, stage gating (risk verdict → user decides), next-step navigation. Zero-touch; no cross-plugin hard calls. |
 | `pm-product-discovery` | Ideation, experiments, assumption testing, prioritization, interview synthesis |
 | `pm-product-strategy` | Vision, strategy/lean/business-model canvas, SWOT, PESTLE, Ansoff, Porter, monetization |
 | `pm-execution` | PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, red-teaming |

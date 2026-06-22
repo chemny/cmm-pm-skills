@@ -22,7 +22,7 @@ What you get is not talk but usable deliverables — a data-grounded market anal
 
 ## Capabilities
 
-Listed in real product-development order: the stages that decide "whether and how to build" come first; delivery and iteration come later.
+**The console `/cmm-pm`** sits above all stages and coordinates the whole pipeline: it keeps a per-project state ledger (no loss across sessions), gates each stage (risk verdict → you decide), and navigates which command to run next. The stages it coordinates are listed below in real product-development order: the stages that decide "whether and how to build" come first; delivery and iteration come later.
 
 | Stage | Command | Output |
 |---|---|---|
@@ -45,11 +45,11 @@ Claude Code supports commands + skills; Codex CLI supports skills (triggered via
 
 ## Install
 
-This repo is a multi-plugin Claude Code marketplace. One command installs all 9 plugins:
+This repo is a multi-plugin Claude Code marketplace. One command installs all 10 plugins:
 
 ```bash
 claude plugin marketplace add chemny/cmm-pm-skills && \
-for p in pm-market-research pm-product-discovery pm-product-strategy pm-execution \
+for p in pm-console pm-market-research pm-product-discovery pm-product-strategy pm-execution \
          pm-go-to-market pm-data-analytics pm-marketing-growth pm-ai-shipping pm-toolkit; \
 do claude plugin install $p@cmm-pm-skills; done
 ```
