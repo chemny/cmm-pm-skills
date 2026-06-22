@@ -6,8 +6,6 @@ cmm-pm-skills is a product-manager workflow skill suite for PMs, founders, solo 
 
 It supports market analysis, demand insight, product strategy, PRD, and UI/tech design, and it can run all the way through user stories, testing, launch, and data iteration — with every stage sharing one work discipline.
 
-> Upstream credit: built on [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT) — it reworks each stage command on top of that plugin skeleton and adds a shared discipline `CONVENTIONS.md` plus UI-design (⑤) and tech-design (⑥) stages. Original copyright is retained in [LICENSE](./LICENSE).
-
 ## Who Is This For?
 
 This suite is designed for:
@@ -113,4 +111,4 @@ cmm-pm-skills/
 
 ## License
 
-MIT. See [LICENSE](./LICENSE) (retains original author phuryn's copyright + CMM modifications).
+MIT. See [LICENSE](./LICENSE). Adapted from [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT); the original copyright is retained in LICENSE.

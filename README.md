@@ -6,8 +6,6 @@ cmm-pm-skills 是一个面向产品经理、创始人、独立开发者和 Agent
 
 它支持市场分析、需求洞察、产品战略、PRD 与界面/技术设计，也可以一路贯通到用户故事、测试、上线与数据迭代——所有阶段共享一套统一工作纪律。
 
-> 致谢上游：本项目基于 [phuryn/pm-skills](https://github.com/phuryn/pm-skills)（MIT）二次开发——在其插件骨架上重构各阶段命令、新增统一工作纪律 `CONVENTIONS.md` 与界面设计(⑤)/技术方案(⑥)等环节。原作者版权见 [LICENSE](./LICENSE)。
-
 ## 适合谁使用？
 
 这个套件适合：
@@ -112,4 +110,4 @@ cmm-pm-skills/
 
 ## 协议
 
-MIT。见 [LICENSE](./LICENSE)（保留原作者 phuryn 版权 + CMM 修改版权）。
+MIT。见 [LICENSE](./LICENSE)。本项目改编自 [phuryn/pm-skills](https://github.com/phuryn/pm-skills)（MIT），原作者版权已在 LICENSE 中保留。
