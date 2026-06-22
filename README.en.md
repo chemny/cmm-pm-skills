@@ -111,11 +111,6 @@ cmm-pm-skills/
 - Some commands need web search (market / competitor research);
 - Optional: GitHub CLI (`gh`) for publishing.
 
-## Maintenance
-
-- Edit discipline → edit root `CONVENTIONS.md` → run `./sync_conventions.sh`;
-- Edit commands/skills → run `python3 validate_plugins.py`.
-
 ## License
 
 MIT. See [LICENSE](./LICENSE) (retains original author phuryn's copyright + CMM modifications).

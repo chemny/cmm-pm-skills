@@ -110,11 +110,6 @@ cmm-pm-skills/
 - 部分命令需联网搜索（市场/竞品研究）；
 - 可选：用于发布的 GitHub CLI（`gh`）。
 
-## 维护
-
-- 改纪律 → 编辑根 `CONVENTIONS.md` → 跑 `./sync_conventions.sh`；
-- 改命令/技能 → 跑 `python3 validate_plugins.py`。
-
 ## 协议
 
 MIT。见 [LICENSE](./LICENSE)（保留原作者 phuryn 版权 + CMM 修改版权）。
