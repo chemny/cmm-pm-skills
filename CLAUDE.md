@@ -10,7 +10,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 **Every command/skill must follow [`CONVENTIONS.md`](CONVENTIONS.md)** — the repo-wide, product-agnostic work discipline: §0 top principle (truth > completeness), how to ask for inputs (Class A/B, echo-then-request, plain language, no popup), atomic keyword integrity, classify competitors by category, search-engine + source-tier discipline, depth bar, objectivity (risk + opportunity, giants ≠ kill), methodology-stays-backstage, no-fabrication, segment-not-aggregate, and a pre-delivery provenance/red-team check. Individual commands only encode their **stage-specific** logic and inherit the rest — do not re-write these rules per command.
 
-**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because plugins install per-directory, the root file does NOT ship with a standalone plugin — so each plugin carries its **own synced copy** at `pm-*/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `./sync_conventions.sh`** to propagate to all plugins.
+**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because a plugin installs by directory, the root file does NOT ship with it — so the plugin carries a **synced copy** at `cmm-pm/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `./sync_conventions.sh`** to propagate.
 
 ## Repo Structure
 
@@ -80,7 +80,7 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 ## Operational Procedures
 
 ### After editing CONVENTIONS.md (the master)
-- Run `./sync_conventions.sh` to copy it into every plugin (`pm-*/CONVENTIONS.md`), so installed plugins stay self-contained. Never hand-edit a plugin's copy — edit the master and sync.
+- Run `./sync_conventions.sh` to copy it into the plugin (`cmm-pm/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
 
 ### After any skill/command change
 1. Run `python3 validate_plugins.py` from the repo root to check all plugins.
