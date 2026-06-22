@@ -1,0 +1,16 @@
+{
+  "name": "pm-data-analytics",
+  "version": "2.0.0",
+  "description": "Data analytics skills for PMs: SQL query generation and cohort analysis. Analyze user data, generate queries, and identify retention patterns.",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "data-analytics",
+    "sql",
+    "cohort-analysis",
+    "retention"
+  ],
+  "license": "MIT"
+}

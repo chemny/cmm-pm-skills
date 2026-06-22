@@ -1,0 +1,20 @@
+{
+  "name": "pm-ai-shipping",
+  "version": "2.0.0",
+  "description": "AI Shipping Kit — for PMs and founders accountable for AI-built code. Document a vibe-coded app, audit it for intended-vs-implemented security gaps and performance issues, and produce a reviewer-ready shipping packet.",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "ai-shipping",
+    "vibe-coding",
+    "security-audit",
+    "performance-audit",
+    "code-review",
+    "documentation",
+    "owasp",
+    "shipping"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,6 @@
+# Private maintainer-only files — never commit
+_Internal/
+CLAUDE.local.md
+node_modules/
+.DS_Store
+publish-check-report.json

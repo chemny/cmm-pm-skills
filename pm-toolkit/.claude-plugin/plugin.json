@@ -1,0 +1,17 @@
+{
+  "name": "pm-toolkit",
+  "version": "2.0.0",
+  "description": "PM utility skills: resume review, NDA drafting, privacy policy generation, and grammar/flow checking. Essential tools for product managers beyond core product work.",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "resume",
+    "legal",
+    "nda",
+    "privacy-policy",
+    "copywriting"
+  ],
+  "license": "MIT"
+}

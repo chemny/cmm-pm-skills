@@ -1,0 +1,20 @@
+{
+  "name": "pm-market-research",
+  "version": "2.0.0",
+  "description": "Market research skills for PMs: user personas, market segmentation, sentiment analysis, and competitive analysis.",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "market-research",
+    "personas",
+    "segmentation",
+    "competitor-analysis",
+    "market-sizing",
+    "TAM",
+    "SAM",
+    "SOM"
+  ],
+  "license": "MIT"
+}

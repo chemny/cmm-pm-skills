@@ -1,0 +1,22 @@
+{
+  "name": "pm-execution",
+  "version": "2.0.0",
+  "description": "Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, and more.",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "execution",
+    "prd",
+    "okrs",
+    "roadmap",
+    "sprint",
+    "pre-mortem",
+    "user-stories",
+    "backlog",
+    "prioritization",
+    "agile"
+  ],
+  "license": "MIT"
+}
