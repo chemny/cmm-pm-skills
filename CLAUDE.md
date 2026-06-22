@@ -15,38 +15,31 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 ## Repo Structure
 
 ```
-pm-skills/                           <- repo root
-├── .claude-plugin/marketplace.json  <- root marketplace manifest (lists all 9 plugins)
-├── .docs/images/                    <- images used by README (webp, gif)
-├── .gitattributes
-├── .gitignore
+cmm-pm-skills/                       <- repo root (marketplace)
+├── .claude-plugin/marketplace.json  <- marketplace manifest (lists the single plugin)
 ├── CLAUDE.md                        <- this file (agent guidance, single source of truth)
 ├── AGENTS.md                        <- pointer to CLAUDE.md (for non-Claude agents)
-├── CONTRIBUTING.md                  <- contributor guidelines
-├── README.md                        <- public documentation (GitHub)
+├── CONVENTIONS.md                   <- master discipline (edit here, then sync)
+├── PIPELINE.md                      <- full-pipeline overview
+├── README.md / README.en.md         <- public documentation (GitHub)
 ├── LICENSE                          <- MIT
+├── sync_conventions.sh              <- copy master CONVENTIONS into the plugin
 ├── validate_plugins.py              <- plugin validator
-└── pm-{name}/                       <- 9 plugin directories
-    ├── .claude-plugin/plugin.json   <- per-plugin manifest
-    ├── skills/{skill}/SKILL.md      <- one folder per skill
-    ├── commands/{command}.md        <- one file per command
-    └── README.md                    <- per-plugin documentation
+├── _design/                         <- methodology blueprints / checklists
+├── _runs/                           <- end-to-end examples (+ per-project _state.yaml)
+└── cmm-pm/                          <- THE single plugin (whole suite)
+    ├── .claude-plugin/plugin.json   <- plugin manifest
+    ├── CONVENTIONS.md               <- synced copy (ships with the plugin)
+    ├── README.md                    <- plugin documentation
+    ├── commands/{command}.md        <- 46 commands (one file each)
+    └── skills/{skill}/SKILL.md      <- 70 skills (one folder each)
 ```
 
-### The 10 plugins
+### Single plugin: `cmm-pm`
 
-| Plugin | Focus |
-|--------|-------|
-| `pm-console` | **Suite-level orchestrator** (`/cmm-pm`): per-project state ledger (`_runs/<project>/_state.yaml`), progress board, stage gating (risk verdict → user decides), next-step navigation. Zero-touch; no cross-plugin hard calls. |
-| `pm-product-discovery` | Ideation, experiments, assumption testing, prioritization, interview synthesis |
-| `pm-product-strategy` | Vision, strategy/lean/business-model canvas, SWOT, PESTLE, Ansoff, Porter, monetization |
-| `pm-execution` | PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, red-teaming |
-| `pm-market-research` | Personas, segmentation, sentiment analysis, competitive analysis, market sizing |
-| `pm-data-analytics` | SQL query generation, cohort/retention analysis |
-| `pm-go-to-market` | GTM strategy, growth loops, motions, beachhead segments, ICPs |
-| `pm-marketing-growth` | Marketing ideas, value-prop statements, North Star metrics, naming, positioning |
-| `pm-toolkit` | Resume review, NDA drafting, privacy policy, grammar/flow checking |
-| `pm-ai-shipping` | AI Shipping Kit: document a vibe-coded app, map test coverage, audit security/performance against intended behavior, compile a shipping packet |
+The whole suite is now **one plugin** (`cmm-pm`) — 46 commands + 70 skills. Earlier it was 10 separate `pm-*` plugins; they were merged so users install once (`cmm-pm@cmm-pm-skills`) and get everything, with `/cmm-pm-skills` as the single entry command. Because everything is one plugin, all command↔skill references are intra-plugin (the old "no cross-plugin references" caution no longer constrains the suite).
+
+Capability groups inside the plugin: orchestration (`/cmm-pm-skills` + `pipeline-orchestration`), market research, product discovery, product strategy, execution (PRD/wireframe/tech-design/stories/tests/OKRs/roadmap…), go-to-market, data analytics, marketing/growth, AI-shipping, and a PM toolkit.
 
 ## Key Design Rules
 

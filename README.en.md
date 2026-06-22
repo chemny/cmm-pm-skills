@@ -22,7 +22,7 @@ What you get is not talk but usable deliverables — a data-grounded market anal
 
 ## Capabilities
 
-**The console `/cmm-pm`** sits above all stages and coordinates the whole pipeline: it keeps a per-project state ledger (no loss across sessions), gates each stage (risk verdict → you decide), and navigates which command to run next. The stages it coordinates are listed below in real product-development order: the stages that decide "whether and how to build" come first; delivery and iteration come later.
+**The entry command `/cmm-pm-skills`** gets you started in one line: run the whole pipeline, or just one stage (e.g. only a PRD). It keeps a per-project state ledger (no loss across sessions), gates each stage (risk verdict → you decide), and navigates the next step. The stages it coordinates are listed below in real product-development order: the stages that decide "whether and how to build" come first; delivery and iteration come later.
 
 | Stage | Command | Output |
 |---|---|---|
@@ -45,31 +45,29 @@ Claude Code supports commands + skills; Codex CLI supports skills (triggered via
 
 ## Install
 
-This repo is a multi-plugin Claude Code marketplace. One command installs all 10 plugins:
+This suite is a **single** Claude Code plugin — two lines to install:
 
 ```bash
-claude plugin marketplace add chemny/cmm-pm-skills && \
-for p in pm-console pm-market-research pm-product-discovery pm-product-strategy pm-execution \
-         pm-go-to-market pm-data-analytics pm-marketing-growth pm-ai-shipping pm-toolkit; \
-do claude plugin install $p@cmm-pm-skills; done
+claude plugin marketplace add chemny/cmm-pm-skills
+claude plugin install cmm-pm@cmm-pm-skills
 ```
 
 After installing, start a fresh agent session so it can rescan plugins.
 
 ## Quick Start
 
-Ask your agent:
+You only need to remember **one** command — ask your agent:
 
 ```text
-/market-analysis one-line description of your product idea
+/cmm-pm-skills
 ```
 
 Expected result:
 
 ```text
-It first confirms the core inputs with you (product / segment / market / monetization),
-then runs a data-driven market analysis, ends with a risk verdict, and asks whether to
-proceed. Move stage by stage.
+It asks how you want to start (run the whole pipeline, or just one stage like a PRD),
+then gets to work; each stage ends with a risk verdict for you to approve before moving on.
+No manual needed. Power users can also call a single command directly, e.g. /write-prd your idea.
 ```
 
 ## Usage Examples
@@ -86,8 +84,9 @@ _runs/natgeo-video/  — an "English-article-to-video learning tool": market ana
 
 ## How It Works
 
-- **Commands = stage actions**, inheriting upstream output and encoding only stage-specific logic;
-- The **shared discipline** lives in the root `CONVENTIONS.md` (master); each plugin carries a synced copy, so it's inherited on install;
+- **Entry `/cmm-pm-skills`** routes you in one line: guide the whole pipeline, or jump straight to one stage;
+- **Commands = stage actions**, inheriting upstream output and also callable standalone (§0d);
+- The **shared discipline** lives in the root `CONVENTIONS.md` (master); the plugin carries a synced copy, so it's inherited on install;
 - Every stage: research → conclusion + risks → the decision is yours.
 
 ## Repository Structure
@@ -96,9 +95,9 @@ _runs/natgeo-video/  — an "English-article-to-video learning tool": market ana
 cmm-pm-skills/
 ├── CONVENTIONS.md          shared discipline (master)
 ├── PIPELINE.md             full-pipeline overview
-├── sync_conventions.sh     master → per-plugin sync
+├── sync_conventions.sh     master → plugin sync
 ├── validate_plugins.py     contract validation
-├── pm-*/                   9 plugins (commands/ + skills/ + bundled CONVENTIONS copy)
+├── cmm-pm/                 single plugin (46 commands + 70 skills + bundled CONVENTIONS copy)
 ├── _design/                methodology blueprints / checklists
 └── _runs/                  end-to-end examples
 ```

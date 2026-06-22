@@ -1,0 +1,24 @@
+{
+  "name": "cmm-pm",
+  "version": "2.0.0",
+  "description": "CMM 产品经理工作流（单插件全套）。总入口 /cmm-pm-skills：一句话上手，从头做整套或只做某一块（PRD/战略/界面/技术方案/用户故事/测试…）。端到端流水线 ①市场→②洞察→③战略→④PRD→⑤设计→⑥技术方案→⑦故事→⑧测试→⑩上线→⑪数据，共享统一纪律 CONVENTIONS.md。",
+  "author": {
+    "name": "CMM"
+  },
+  "keywords": [
+    "product-management",
+    "pm",
+    "prd",
+    "market-research",
+    "product-strategy",
+    "user-stories",
+    "wireframe",
+    "tech-design",
+    "go-to-market",
+    "okrs",
+    "roadmap",
+    "orchestration",
+    "workflow"
+  ],
+  "license": "MIT"
+}
