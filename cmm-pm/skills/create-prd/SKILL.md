@@ -66,6 +66,19 @@ A well-structured PRD clearly communicates the what, why, and how of your produc
    - What goes in the first version vs. future versions?
    - Avoid exact dates; use relative timeframes
 
+3.5 **条件性章节（达一线大厂"开发+上线就绪"bar；通用规则——只规定"何时必须有哪些要素"，内容按本产品填，不触发可略）**
+
+   逐条判断触发条件，成立则该章节必须有：
+   - **成本与单元经济性** — 触发：有按量外部成本（AI 推理 / API / 算力 / 云）。必答：单位动作成本 × 规模 × 免费层暴露 → 毛利 / 烧钱速度。
+   - **隐私与数据** — 触发：采集或存储用户数据、录音、位置、PII。必答：数据清单 / 是否外发 / 留存期 / 用户同意与删除 / 合规（如 GDPR）。
+   - **指标（始终必答，扩成三类）** — 正向（北极星）+ 护栏（质量/性能/稳定：时延、崩溃率、误触发等）+ 反向/反作弊（防"赢了指标、输了体验"）各 ≥1。
+   - **实验与灰度发布** — 触发：面向规模用户上线。必答：验证方式（A/B、holdout）、灰度策略、放量门槛、回滚条件。
+   - **安全 / 滥用 / Integrity** — 触发：产出可被滥用、涉他人、涉敏感或合规。必答：滥用/误用场景 + 应对。
+   - **发布就绪与签字（始终必答）** — 上线门槛（质量/性能/隐私达标线）+ 谁签字（eng / design / legal / data）。
+   - **无障碍（a11y）** — 触发：有面向人的界面。必答：键盘可达 / 读屏 / 对比度等要点。
+   - **待解项（始终）** — 每条带 owner + deadline，不是一句话清单。
+   - **风险（始终）** — 每条带 缓解措施 + owner，不止罗列。
+
 4. **Use Accessible Language**: Write for a primary school graduate. Avoid jargon. Use clear, short sentences.
 
 5. **Structure Output**: Present the PRD as a well-formatted markdown document with clear headings and sections.
