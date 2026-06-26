@@ -1,6 +1,7 @@
 ---
 name: user-personas
 description: "Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey data, creating user profiles from research, or segmenting users for product decisions."
+scenarios: ["帮我建用户画像","目标用户是谁、怎么分群","给这个产品做persona"]
 ---
 
 # User Personas

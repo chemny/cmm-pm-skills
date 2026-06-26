@@ -1,6 +1,7 @@
 ---
 name: competitor-analysis
 description: "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities."
+scenarios: ["分析一下我这赛道的竞品","做个竞品对比：石墨vs飞书文档","竞品都怎么定价的"]
 ---
 
 # Competitor Analysis

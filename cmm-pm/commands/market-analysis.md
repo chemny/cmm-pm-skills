@@ -1,6 +1,8 @@
 ---
 description: Run a rigorous market analysis using the Five Looks framework (五看) — intake gating, industry/market/competition/self/opportunity scan, with source-credibility discipline and a mandatory bear case. Front half of Five Looks & Three Decisions (五看三定).
 argument-hint: "<product or market idea>"
+uses: [competitor-analysis, market-sizing, user-personas]
+outputs: ["市场/用户/买单人/竞品/颠覆机会（数据定）"]
 ---
 
 # /market-analysis -- Market Analysis (Five Looks / 五看)

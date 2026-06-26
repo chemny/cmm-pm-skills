@@ -1,6 +1,8 @@
 ---
 description: Generate comprehensive test scenarios from user stories or feature specs — happy paths, edge cases, and error handling
 argument-hint: "<user stories, feature spec, or description>"
+uses: [test-scenarios]
+outputs: ["测试用例（happy/边界/错误）"]
 ---
 
 # /test-scenarios -- Test Scenario Generator

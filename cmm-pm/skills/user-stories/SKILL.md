@@ -1,6 +1,7 @@
 ---
 name: user-stories
 description: "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria."
+scenarios: ["把这个需求拆成用户故事","写带验收标准的story","这份PRD怎么拆backlog"]
 ---
 # User Stories
 

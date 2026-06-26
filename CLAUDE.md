@@ -49,6 +49,7 @@ Capability groups inside the plugin: orchestration (`/cmm-pm-skills` + `pipeline
 - **Intra-plugin "Uses" references are fine** — skills and commands in the same plugin always ship together.
 - Commands use a single `$ARGUMENTS` placeholder. Skills need no placeholders (they read context from the conversation).
 - **Frontmatter required:** Skills need `name` + `description`; commands need `description` + `argument-hint`.
+- **Frontmatter recommended (better triggering + discoverability):** skills add `scenarios:` (≈3 example user utterances, inline YAML list) to sharpen auto-loading; commands add `outputs:` (and `uses:` when they apply a named skill). Coverage is tracked in `CATALOG.md` (`覆盖率` line); roll out across all components incrementally — these are inline-flow YAML lists so the validator parses them.
 - A skill's `name` **must match its directory name**.
 - Skills can be force-loaded with `/plugin-name:skill-name` or `/skill-name`.
 - Keep frontmatter lean (always loaded); put detail in the SKILL.md body (loaded when triggered) — progressive disclosure.

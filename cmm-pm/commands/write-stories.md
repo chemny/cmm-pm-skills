@@ -1,6 +1,8 @@
 ---
 description: Break a feature into backlog items — user stories, job stories, or WWA format with acceptance criteria
 argument-hint: "[user|job|wwa] <feature description or PRD>"
+uses: [user-stories, job-stories]
+outputs: ["用户故事 + 验收标准（可追溯）"]
 ---
 
 # /write-stories -- Backlog Item Generator

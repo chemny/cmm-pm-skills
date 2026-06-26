@@ -1,6 +1,7 @@
 ---
 description: Turn a PRD into a UI spec + clickable HTML prototype — Mermaid screen-flow/state diagrams, a self-contained clickable HTML prototype, and per-screen interaction specs with full state coverage. Hands off to user stories.
 argument-hint: "<the PRD / feature>"
+outputs: ["Mermaid流/态 + 可点击HTML原型 + 规格"]
 ---
 
 # /wireframe -- UI Spec & Clickable Prototype

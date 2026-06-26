@@ -1,6 +1,8 @@
 ---
 description: Turn the validated need + strategy (①②③) into an engineering-ready PRD — or, if the need isn't validated yet, into a Validation-MVP PRD that tests the leap-of-faith cheaply. Inherits upstream; requirements traced to evidence, not invented.
 argument-hint: "<feature / the strategy conclusion>"
+uses: [create-prd]
+outputs: ["可开发PRD（需求/功能/流程/交互/数据/边界）"]
 ---
 
 # /write-prd -- Product Requirements Document (execution)

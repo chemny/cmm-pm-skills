@@ -1,6 +1,7 @@
 ---
 description: Turn the PRD + UI spec + backlog into a technical design — tech stack (researched, not guessed), architecture (Mermaid), data model, key technical decisions, and resolution of the backlog's spikes. A grounded proposal; final architecture is engineering's call.
 argument-hint: "<the PRD / feature / spike to resolve>"
+outputs: ["选型/架构/数据/解spike/冲突检查"]
 ---
 
 # /tech-design -- Technical Design (⑥)

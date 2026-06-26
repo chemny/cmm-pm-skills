@@ -1,6 +1,8 @@
 ---
 description: Run demand insight (需求洞察) — frame the real job-to-be-done, analyze concrete scenarios/segments, grade evidence, name the leap-of-faith assumption, and produce a PRIMARY-research validation plan. Desk research yields a graded HYPOTHESIS, never a validated GO.
 argument-hint: "<need / market-analysis conclusion / product idea>"
+uses: [opportunity-solution-tree]
+outputs: ["真需求(JTBD)+风险结论+一手验证计划"]
 ---
 
 # /insight -- 需求洞察 (Demand Insight)

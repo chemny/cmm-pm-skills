@@ -1,6 +1,8 @@
 ---
 description: Decide how we win — positioning, moat, business model, pricing, growth, key tasks. Built on the persona/market from ① and the validated need from ②; grounded not invented; marked provisional if the need isn't validated yet.
 argument-hint: "<product / the insight conclusion>"
+uses: [pricing-strategy, monetization-strategy]
+outputs: ["定位/壁垒/商业模式/定价/打法"]
 ---
 
 # /strategy -- Product Strategy (how we win)

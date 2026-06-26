@@ -1,6 +1,7 @@
 ---
 name: market-sizing
 description: "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry."
+scenarios: ["估算一下这个市场多大","算TAM/SAM/SOM","国内这个品类规模多大"]
 ---
 
 # Estimate Market Size (TAM, SAM, SOM)
