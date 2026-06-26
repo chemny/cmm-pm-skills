@@ -84,8 +84,8 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 
 ### After any skill/command change
 1. Run `python3 validate_plugins.py` from the repo root to check all plugins.
-2. If skills/commands were added or removed, update the counts in `README.md`.
-3. If totals changed, update the count in the `marketplace.json` description.
+2. Run `python3 generate_catalog.py` to refresh `CATALOG.md` (component counts auto-update there — single source of truth for "what's in the suite").
+3. If skills/commands were added or removed, update the counts in `README.md` and the `marketplace.json` description to match `CATALOG.md`.
 4. Bump versions across all manifests (see Versioning).
 
 ### After a description change
