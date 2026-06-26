@@ -1,6 +1,7 @@
 ---
 name: self-assessment
 description: "Honestly assess our own capabilities, resources, strengths, weaknesses, and the gap versus incumbents — the 'Look at Ourselves' (看自己) step most market analyses skip. Use when evaluating whether and why we can win a market, sizing our capability gap, or before committing to a direction."
+scenarios: ["我们到底有没有能力打赢这个市场", "客观评估下自己的优劣势和差距", "对比头部我们差在哪"]
 ---
 
 # Self-Assessment (看自己)

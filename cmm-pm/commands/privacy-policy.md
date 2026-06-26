@@ -1,6 +1,8 @@
 ---
 description: Draft a privacy policy covering data collection, usage, storage, and compliance requirements
 argument-hint: "<product and data handling context>"
+uses: [privacy-policy]
+outputs: ["隐私政策"]
 ---
 
 # /privacy-policy -- Privacy Policy Generator

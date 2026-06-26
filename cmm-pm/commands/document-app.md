@@ -1,6 +1,8 @@
 ---
 description: Reverse-engineer an AI-built codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply
 argument-hint: "<repo path or area; defaults to the whole repository>"
+uses: [shipping-artifacts]
+outputs: ["系统文档集"]
 ---
 
 # /document-app -- Make the System Reviewable

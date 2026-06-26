@@ -1,6 +1,8 @@
 ---
 description: Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results
 argument-hint: "<team, product area, or company objective>"
+uses: [brainstorm-okrs]
+outputs: ["团队OKR草案"]
 ---
 
 # /plan-okrs -- Team OKR Planning

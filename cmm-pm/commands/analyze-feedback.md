@@ -1,6 +1,8 @@
 ---
 description: Analyze user feedback at scale — sentiment analysis, theme extraction, and segment-level insights
 argument-hint: "<feedback data as CSV, text, or file>"
+uses: [sentiment-analysis]
+outputs: ["反馈情感与主题洞察"]
 ---
 
 # /analyze-feedback -- User Feedback Analysis

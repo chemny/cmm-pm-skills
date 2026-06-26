@@ -1,6 +1,7 @@
 ---
 name: job-stories
 description: "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations."
+scenarios: ["帮我写成job story格式", "用When-I-want-so的格式整理需求", "把这些场景写成JTBD的待办项"]
 ---
 # Job Stories
 

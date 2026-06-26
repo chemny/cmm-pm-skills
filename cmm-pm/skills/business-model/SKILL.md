@@ -1,6 +1,7 @@
 ---
 name: business-model
 description: "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model."
+scenarios: ["帮我画个商业模式画布", "梳理下这门生意怎么赚钱", "用九宫格分析下我们的商业模式"]
 ---
 # Business Model Canvas
 

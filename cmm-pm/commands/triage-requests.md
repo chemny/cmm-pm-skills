@@ -1,6 +1,8 @@
 ---
 description: Analyze, categorize, and prioritize a batch of feature requests from customers or stakeholders
 argument-hint: "<feature requests as text, file, or paste>"
+uses: [analyze-feature-requests, prioritize-features]
+outputs: ["需求分类+优先级"]
 ---
 
 # /triage-requests -- Feature Request Triage

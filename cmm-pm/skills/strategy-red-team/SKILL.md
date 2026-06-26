@@ -1,6 +1,7 @@
 ---
 name: strategy-red-team
 description: "Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions before reality does. Steelmans then attacks each claim, ranks failure modes by impact × likelihood × cheapness-to-test, and returns the cheapest test and kill criteria for each. Use when stress-testing a plan, pressure-testing a strategy, challenging assumptions, or preparing a doc for executive review."
+scenarios: ["帮我红队挑战下这份战略", "压测一下这个方案的核心假设", "上汇报前帮我找出最脆弱的论点"]
 ---
 
 # Strategy Red-Team: Attack the Assumptions Before Reality Does

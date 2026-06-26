@@ -1,6 +1,8 @@
 ---
 description: Red-team a PRD, roadmap, or strategy — attack its load-bearing assumptions and return the cheapest test for each before you commit
 argument-hint: "<PRD, roadmap, strategy, or the current doc>"
+uses: [strategy-red-team]
+outputs: ["红队挑战+最便宜验证"]
 ---
 
 # /red-team-prd -- Attack the Plan Before Reality Does

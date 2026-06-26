@@ -1,6 +1,8 @@
 ---
 description: Generate SQL queries from natural language — supports BigQuery, PostgreSQL, MySQL, and more
 argument-hint: "<what you want to know, in plain English>"
+uses: [sql-queries]
+outputs: ["SQL查询语句"]
 ---
 
 # /write-query -- SQL Query Generator

@@ -1,6 +1,7 @@
 ---
 name: prioritize-features
 description: "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas."
+scenarios: ["这堆功能我该先做哪个", "帮我把backlog排个优先级", "按影响和成本给功能排序"]
 ---
 
 ## Prioritize Feature Backlog

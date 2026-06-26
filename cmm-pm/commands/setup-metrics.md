@@ -1,6 +1,8 @@
 ---
 description: Design a product metrics dashboard with North Star metric, input metrics, health metrics, and alert thresholds
 argument-hint: "<product or feature area>"
+uses: [metrics-dashboard]
+outputs: ["产品指标看板设计"]
 ---
 
 # /setup-metrics -- Product Metrics Dashboard Design

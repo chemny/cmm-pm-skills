@@ -1,6 +1,8 @@
 ---
 description: Brainstorm marketing ideas, positioning, value prop statements, and product names — creative marketing toolkit
 argument-hint: "<product or marketing challenge>"
+uses: [marketing-ideas, positioning-ideas, value-prop-statements, product-name]
+outputs: ["营销点子+定位+卖点+命名"]
 ---
 
 # /market-product -- Marketing Creative Toolkit

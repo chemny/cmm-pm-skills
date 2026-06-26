@@ -1,6 +1,7 @@
 ---
 name: privacy-policy
 description: "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance."
+scenarios: ["帮我起草一份隐私政策", "产品上线要个合规的隐私条款", "写个符合GDPR的隐私政策"]
 ---
 # Privacy Policy Generator
 

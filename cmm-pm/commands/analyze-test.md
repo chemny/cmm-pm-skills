@@ -1,6 +1,8 @@
 ---
 description: Analyze A/B test results — statistical significance, sample size validation, and ship/extend/stop recommendations
 argument-hint: "<test results as data, screenshot, or description>"
+uses: [ab-test-analysis]
+outputs: ["AB测试结论+上线建议"]
 ---
 
 # /analyze-test -- A/B Test Analysis

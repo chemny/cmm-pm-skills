@@ -1,6 +1,7 @@
 ---
 name: review-resume
 description: "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact."
+scenarios: ["帮我review下这份PM简历", "我的简历怎么改更有竞争力", "按最佳实践给简历挑挑毛病"]
 ---
 # Resume Review for Product Managers
 

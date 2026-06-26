@@ -1,6 +1,7 @@
 ---
 description: Static performance audit of AI-built code — find over-fetching, missing indexes, and caching opportunities, ranked by effort and impact
 argument-hint: "<repo path or area; defaults to the whole repository>"
+outputs: ["静态性能审计报告"]
 ---
 
 # /performance-audit-static -- Find What Won't Scale

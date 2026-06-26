@@ -1,6 +1,8 @@
 ---
 description: Define your North Star Metric and supporting input metrics — classify the business game and validate against best practices
 argument-hint: "<product or business>"
+uses: [north-star-metric]
+outputs: ["北极星+输入指标"]
 ---
 
 # /north-star -- North Star Metric Definition

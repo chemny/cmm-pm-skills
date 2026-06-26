@@ -1,6 +1,7 @@
 ---
 name: customer-journey-map
 description: "Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey."
+scenarios: ["帮我画一张用户旅程地图", "梳理下用户从注册到付费的体验", "哪个环节用户体验最差"]
 ---
 
 ## Customer Journey Map

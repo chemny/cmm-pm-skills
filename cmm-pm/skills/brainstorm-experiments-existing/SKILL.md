@@ -1,6 +1,7 @@
 ---
 name: brainstorm-experiments-existing
 description: "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments."
+scenarios: ["这个功能上线前怎么低成本验证", "帮我设计几个实验测假设", "现有产品怎么快速试错"]
 ---
 
 ## Design Experiments (Existing Product)

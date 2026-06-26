@@ -1,6 +1,8 @@
 ---
 description: Design sustainable growth mechanisms — growth loops and GTM motions for product-led and sales-led strategies
 argument-hint: "<product or growth challenge>"
+uses: [growth-loops, gtm-motions]
+outputs: ["增长闭环+渠道打法"]
 ---
 
 # /growth-strategy -- Growth Loops & GTM Motions

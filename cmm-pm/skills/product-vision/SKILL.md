@@ -1,6 +1,7 @@
 ---
 name: product-vision
 description: "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction."
+scenarios: ["帮我写一个鼓舞人心的产品愿景", "给团队定个共同的方向", "提炼一句产品的vision statement"]
 ---
 # Product Vision
 

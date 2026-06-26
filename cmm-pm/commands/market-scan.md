@@ -1,6 +1,8 @@
 ---
 description: Comprehensive macro environment analysis — SWOT, PESTLE, Porter's Five Forces, and Ansoff Matrix in one scan
 argument-hint: "<product, market, or industry>"
+uses: [swot-analysis, pestle-analysis, porters-five-forces, ansoff-matrix]
+outputs: ["宏观环境四合一扫描"]
 ---
 
 # /market-scan -- Macro Environment Analysis

@@ -1,6 +1,8 @@
 ---
 description: Check grammar, logic, and flow in any text — targeted fixes without rewriting
 argument-hint: "<text to check>"
+uses: [grammar-check]
+outputs: ["语法/逻辑/流畅性修订"]
 ---
 
 # /proofread -- Grammar & Flow Check

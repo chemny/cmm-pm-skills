@@ -1,6 +1,7 @@
 ---
 name: swot-analysis
 description: "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position."
+scenarios: ["帮我做个SWOT分析", "梳理下我们的优劣势机会威胁", "评估下这个产品的处境"]
 ---
 # SWOT Analysis
 

@@ -1,6 +1,8 @@
 ---
 description: Analyze the competitive landscape — identify competitors, compare strengths and weaknesses, find differentiation opportunities
 argument-hint: "<your product or market>"
+uses: [competitor-analysis]
+outputs: ["竞争格局与差异化机会"]
 ---
 
 # /competitive-analysis -- Competitive Landscape Analysis

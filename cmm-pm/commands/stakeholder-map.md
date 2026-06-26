@@ -1,6 +1,8 @@
 ---
 description: Map stakeholders on a Power × Interest grid and create a tailored communication plan
 argument-hint: "<project, initiative, or launch>"
+uses: [stakeholder-map]
+outputs: ["干系人地图+沟通计划"]
 ---
 
 # /stakeholder-map -- Stakeholder Mapping & Communication Plan

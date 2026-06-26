@@ -1,6 +1,8 @@
 ---
 description: Design a pricing strategy — models, competitive analysis, willingness-to-pay estimation, and pricing experiments
 argument-hint: "<product or pricing question>"
+uses: [pricing-strategy, monetization-strategy]
+outputs: ["定价策略+变现方案"]
 ---
 
 # /pricing -- Pricing Strategy Design

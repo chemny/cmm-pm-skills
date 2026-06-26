@@ -1,6 +1,8 @@
 ---
 description: Turn a vibe-coded repo into a reviewer-ready shipping packet — document the app, wire agent context, run security and performance audits, map test coverage, and compile the results
 argument-hint: "<repo path or area; defaults to the whole repository>"
+uses: [shipping-artifacts, intended-vs-implemented]
+outputs: ["上线就绪审查包"]
 ---
 
 # /ship-check -- Is This Safe to Ship?

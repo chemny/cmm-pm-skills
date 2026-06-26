@@ -1,6 +1,8 @@
 ---
 description: Create a sales-ready competitive battlecard — positioning, feature comparison, objection handling, and win strategies
 argument-hint: "<your product> vs <competitor>"
+uses: [competitive-battlecard]
+outputs: ["竞品对打battlecard"]
 ---
 
 # /battlecard -- Competitive Battlecard

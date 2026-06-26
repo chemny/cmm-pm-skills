@@ -1,6 +1,7 @@
 ---
 name: north-star-metric
 description: "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation. Classify the business game (Attention, Transaction, Productivity) and validate against 7 criteria for an effective North Star. Use when choosing a North Star Metric, setting up a metrics framework, learning about the North Star Framework, or deciding what to measure."
+scenarios: ["帮我定个北极星指标", "我们最该盯的核心指标是哪个", "怎么搭一套北极星加输入指标"]
 ---
 # North Star Metric
 

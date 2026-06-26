@@ -1,6 +1,7 @@
 ---
 name: positioning-ideas
 description: "Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy."
+scenarios: ["帮我想几个差异化的产品定位", "怎么和竞品做出区隔", "我们的品牌定位该怎么打"]
 ---
 # Positioning Ideas
 

@@ -1,6 +1,7 @@
 ---
 name: prioritization-frameworks
 description: "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization approaches work."
+scenarios: ["RICE和ICE哪个更适合我", "有哪些优先级排序的方法", "教我怎么用Kano或MoSCoW"]
 ---
 
 ## Prioritization Frameworks Reference

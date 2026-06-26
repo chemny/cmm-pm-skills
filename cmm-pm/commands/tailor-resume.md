@@ -1,6 +1,8 @@
 ---
 description: Tailor a PM resume to a specific job description — keyword alignment, experience reframing, and strategic optimization
 argument-hint: "<resume> + <job description>"
+uses: [review-resume]
+outputs: ["按JD定制的简历"]
 ---
 
 # /tailor-resume -- Resume-to-JD Optimization

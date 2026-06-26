@@ -1,6 +1,8 @@
 ---
 description: Comprehensive PM resume review against 10 best practices — structure, impact metrics, keywords, and actionable feedback
 argument-hint: "<resume as text or file>"
+uses: [review-resume]
+outputs: ["PM简历评审反馈"]
 ---
 
 # /review-resume -- PM Resume Review

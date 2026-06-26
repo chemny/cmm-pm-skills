@@ -1,6 +1,7 @@
 ---
 name: prioritize-assumptions
 description: "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas."
+scenarios: ["这堆假设我该先验哪个", "用影响乘风险给假设排个序", "帮我决定先测哪些假设"]
 ---
 
 ## Prioritize Assumptions

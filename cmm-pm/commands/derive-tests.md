@@ -1,6 +1,8 @@
 ---
 description: Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-case cases from the system docs, separate existing coverage from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a green-before-merge CI gate
 argument-hint: "<repo path or area; defaults to the whole repository>"
+uses: [shipping-artifacts, intended-vs-implemented]
+outputs: ["测试覆盖地图"]
 ---
 
 # /derive-tests -- Turn Intent Into Tests

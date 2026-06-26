@@ -1,6 +1,7 @@
 ---
 name: lean-canvas
 description: "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture."
+scenarios: ["帮我画个精益画布", "用lean canvas捋一遍这个想法", "快速验证下这个商业假设"]
 ---
 # Lean Canvas
 

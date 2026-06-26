@@ -1,6 +1,8 @@
 ---
 description: Draft a Non-Disclosure Agreement between two parties with jurisdiction-appropriate clauses
 argument-hint: "<parties and context>"
+uses: [draft-nda]
+outputs: ["保密协议NDA"]
 ---
 
 # /draft-nda -- NDA Drafting

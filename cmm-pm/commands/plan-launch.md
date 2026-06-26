@@ -1,6 +1,8 @@
 ---
 description: Create a full go-to-market strategy — beachhead segment, ICP, messaging, channels, and launch plan
 argument-hint: "<product or feature to launch>"
+uses: [beachhead-segment, ideal-customer-profile, gtm-strategy]
+outputs: ["完整GTM上市计划"]
 ---
 
 # /plan-launch -- Go-to-Market Strategy

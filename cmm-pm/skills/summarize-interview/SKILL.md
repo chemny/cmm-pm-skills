@@ -1,6 +1,7 @@
 ---
 name: summarize-interview
 description: "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries."
+scenarios: ["帮我把这段访谈录音整理成结构", "提炼下这次用户访谈的关键信息", "把访谈转成JTBD和行动项"]
 ---
 
 ## Summarize Customer Interview

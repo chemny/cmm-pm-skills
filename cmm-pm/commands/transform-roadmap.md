@@ -1,6 +1,8 @@
 ---
 description: Convert a feature-based roadmap into an outcome-focused roadmap that communicates strategic intent
 argument-hint: "<roadmap as text, file, or list of planned features>"
+uses: [outcome-roadmap]
+outputs: ["结果导向路线图"]
 ---
 
 # /transform-roadmap -- Outcome-Focused Roadmap

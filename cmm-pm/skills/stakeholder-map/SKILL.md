@@ -1,6 +1,7 @@
 ---
 name: stakeholder-map
 description: "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement."
+scenarios: ["帮我做个干系人地图", "这个项目要怎么管理各方利益相关者", "按权力和兴趣给干系人分类做沟通计划"]
 ---
 
 ## Stakeholder Mapping & Communication Plan

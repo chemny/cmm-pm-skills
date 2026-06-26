@@ -1,6 +1,8 @@
 ---
 description: Generate realistic dummy datasets for testing — CSV, JSON, SQL inserts, or Python scripts
 argument-hint: "<description of the data you need>"
+uses: [dummy-dataset]
+outputs: ["测试用假数据集"]
 ---
 
 # /generate-data -- Test Data Generator

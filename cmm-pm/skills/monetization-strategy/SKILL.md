@@ -1,6 +1,7 @@
 ---
 name: monetization-strategy
 description: "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product."
+scenarios: ["这个产品该怎么变现", "帮我想几种盈利模式", "探索下不同的收入模式哪种合适"]
 ---
 # Monetization Strategy
 

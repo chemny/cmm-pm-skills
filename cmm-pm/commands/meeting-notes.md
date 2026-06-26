@@ -1,6 +1,8 @@
 ---
 description: Summarize a meeting transcript into structured notes with decisions, action items, and follow-ups
 argument-hint: "<transcript or meeting notes>"
+uses: [summarize-meeting]
+outputs: ["会议纪要"]
 ---
 
 # /meeting-notes -- Meeting Summary

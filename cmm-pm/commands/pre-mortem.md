@@ -1,6 +1,8 @@
 ---
 description: Run a pre-mortem risk analysis on a PRD, launch plan, or feature — identify what could go wrong before it does
 argument-hint: "<PRD, plan, or feature description>"
+uses: [pre-mortem]
+outputs: ["事前验尸风险清单"]
 ---
 
 # /pre-mortem -- Pre-Launch Risk Analysis

@@ -1,6 +1,7 @@
 ---
 name: draft-nda
 description: "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership."
+scenarios: ["帮我起草一份保密协议", "和合作方签NDA草个稿", "拟个双方的保密协议条款"]
 ---
 # NDA (Non-Disclosure Agreement) Drafting
 

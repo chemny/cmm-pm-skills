@@ -1,6 +1,8 @@
 ---
 description: Prepare a customer interview script or summarize an interview transcript into structured insights
 argument-hint: "[prep|summarize] <topic or transcript>"
+uses: [interview-script, summarize-interview]
+outputs: ["访谈脚本/访谈纪要"]
 ---
 
 # /interview -- Customer Interview Prep & Summary

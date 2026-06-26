@@ -1,6 +1,7 @@
 ---
 name: product-name
 description: "Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audience. Use when naming a new product, rebranding, or exploring product name ideas."
+scenarios: ["帮我给新产品起几个名字", "想几个好记又独特的产品名", "这个产品该叫什么名好"]
 ---
 # Product Name
 

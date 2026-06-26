@@ -1,6 +1,7 @@
 ---
 name: summarize-meeting
 description: "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions."
+scenarios: ["帮我把会议记录整理成纪要", "提炼这次会的决议和待办", "会议转录帮我写个summary"]
 ---
 
 # Summarize Meeting

@@ -1,6 +1,8 @@
 ---
 description: Perform cohort analysis on user data — retention curves, feature adoption, and engagement trends
 argument-hint: "<data file or description of what to analyze>"
+uses: [cohort-analysis]
+outputs: ["留存与采纳分析报告"]
 ---
 
 # /analyze-cohorts -- Cohort Analysis

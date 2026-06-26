@@ -1,6 +1,7 @@
 ---
 name: pre-mortem
 description: "Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants (unspoken worries), then classifies as launch-blocking, fast-follow, or track. Use when preparing for launch, stress-testing a product plan, or identifying what could go wrong."
+scenarios: ["上线前帮我做个事前验尸", "这个方案可能哪里会翻车", "提前找出会让项目失败的风险"]
 ---
 
 # Pre-Mortem: Risk Analysis for Product Launch

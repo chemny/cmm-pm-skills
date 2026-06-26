@@ -1,6 +1,8 @@
 ---
 description: Static security audit of AI-built code — map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks
 argument-hint: "<repo path or area; defaults to the whole repository>"
+uses: [intended-vs-implemented]
+outputs: ["静态安全审计报告"]
 ---
 
 # /security-audit-static -- Audit the Code You Already Have

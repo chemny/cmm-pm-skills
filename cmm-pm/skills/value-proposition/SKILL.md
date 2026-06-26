@@ -1,6 +1,7 @@
 ---
 name: value-proposition
 description: "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product."
+scenarios: ["帮我设计产品的价值主张", "用JTBD模板讲清为什么选我们", "梳理下我们给用户的核心价值"]
 ---
 # Value Proposition
 

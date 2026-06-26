@@ -1,6 +1,7 @@
 ---
 name: sprint-plan
 description: "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity."
+scenarios: ["帮我做这个迭代的sprint计划", "估下团队产能选哪些故事进迭代", "排一下这个冲刺的范围和依赖"]
 ---
 
 ## Sprint Planning

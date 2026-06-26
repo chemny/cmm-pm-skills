@@ -59,7 +59,9 @@ def main():
     lines.append("")
     sc = sum(1 for p in sorted(glob.glob(os.path.join(skill_dir, "*/"))) if frontmatter_field(os.path.join(p, "SKILL.md"), "scenarios"))
     uo = sum(1 for p in sorted(glob.glob(os.path.join(cmd_dir, "*.md"))) if os.path.basename(p)[:-3].lower() != "readme" and frontmatter_field(p, "outputs"))
-    lines.append(f"**覆盖率**：技能含 `scenarios` {sc}/{len(skills)} ｜ 命令含 `outputs` {uo}/{len(cmds)}（其余为长尾，逐批补全）。")
+    full = sc == len(skills) and uo == len(cmds)
+    tail = "（已全覆盖）" if full else "（其余为长尾，逐批补全）"
+    lines.append(f"**覆盖率**：技能含 `scenarios` {sc}/{len(skills)} ｜ 命令含 `outputs` {uo}/{len(cmds)}{tail}。")
     lines.append("")
     lines.append(f"## 命令（{len(cmds)}）")
     lines.append("")

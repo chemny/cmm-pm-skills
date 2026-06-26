@@ -1,6 +1,8 @@
 ---
 description: Comprehensive user research — build personas, segment users, and map the customer journey from research data
 argument-hint: "<research data, survey results, or product description>"
+uses: [user-personas, user-segmentation, market-segments, customer-journey-map]
+outputs: ["用户画像+分群+旅程地图"]
 ---
 
 # /research-users -- User Research Synthesis

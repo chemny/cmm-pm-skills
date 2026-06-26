@@ -1,6 +1,7 @@
 ---
 name: sql-queries
 description: "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business questions into queries."
+scenarios: ["帮我把这个需求写成SQL", "用大白话描述帮我生成查询语句", "查这个数据的SQL怎么写"]
 ---
 
 # SQL Query Generator

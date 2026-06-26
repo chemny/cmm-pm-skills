@@ -1,6 +1,8 @@
 ---
 description: Design a value proposition using the 6-part JTBD template — Who, Why, What before, How, What after, Alternatives
 argument-hint: "<product or feature>"
+uses: [value-proposition]
+outputs: ["6段式价值主张"]
 ---
 
 # /value-proposition -- Value Proposition Design
