@@ -10,7 +10,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 **Every command/skill must follow [`CONVENTIONS.md`](CONVENTIONS.md)** — the repo-wide, product-agnostic work discipline: §0 top principle (truth > completeness), how to ask for inputs (Class A/B, echo-then-request, plain language, no popup), atomic keyword integrity, classify competitors by category, search-engine + source-tier discipline, depth bar, objectivity (risk + opportunity, giants ≠ kill), methodology-stays-backstage, no-fabrication, segment-not-aggregate, and a pre-delivery provenance/red-team check. Individual commands only encode their **stage-specific** logic and inherit the rest — do not re-write these rules per command.
 
-**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because a plugin installs by directory, the root file does NOT ship with it — so the plugin carries a **synced copy** at `cmm-pm/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `./sync_conventions.sh`** to propagate.
+**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because a plugin installs by directory, the root file does NOT ship with it — so the plugin carries a **synced copy** at `cmm-pm-skills/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `./sync_conventions.sh`** to propagate.
 
 ## Repo Structure
 
@@ -27,7 +27,7 @@ cmm-pm-skills/                       <- repo root (marketplace)
 ├── validate_plugins.py              <- plugin validator
 ├── _design/                         <- methodology blueprints / checklists
 ├── _runs/                           <- end-to-end examples (+ per-project _state.yaml)
-└── cmm-pm/                          <- THE single plugin (whole suite)
+└── cmm-pm-skills/                   <- THE single plugin (whole suite)
     ├── .claude-plugin/plugin.json   <- plugin manifest
     ├── CONVENTIONS.md               <- synced copy (ships with the plugin)
     ├── README.md                    <- plugin documentation
@@ -35,9 +35,9 @@ cmm-pm-skills/                       <- repo root (marketplace)
     └── skills/{skill}/SKILL.md      <- 70 skills (one folder each)
 ```
 
-### Single plugin: `cmm-pm`
+### Single plugin: `cmm-pm-skills`
 
-The whole suite is now **one plugin** (`cmm-pm`) — 46 commands + 70 skills. Earlier it was 10 separate `pm-*` plugins; they were merged so users install once (`cmm-pm@cmm-pm-skills`) and get everything, with `/cmm-pm-skills` as the single entry command. Because everything is one plugin, all command↔skill references are intra-plugin (the old "no cross-plugin references" caution no longer constrains the suite).
+The whole suite is now **one plugin** (`cmm-pm-skills`) — 46 commands + 70 skills. Earlier it was 10 separate `pm-*` plugins; they were merged so users install once (`cmm-pm-skills@cmm-pm-skills`) and get everything, with `/cmm-pm-skills` as the single entry command. Because everything is one plugin, all command↔skill references are intra-plugin (the old "no cross-plugin references" caution no longer constrains the suite).
 
 Capability groups inside the plugin: orchestration (`/cmm-pm-skills` + `pipeline-orchestration`), market research, product discovery, product strategy, execution (PRD/wireframe/tech-design/stories/tests/OKRs/roadmap…), go-to-market, data analytics, marketing/growth, AI-shipping, and a PM toolkit.
 
@@ -81,7 +81,7 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 ## Operational Procedures
 
 ### After editing CONVENTIONS.md (the master)
-- Run `./sync_conventions.sh` to copy it into the plugin (`cmm-pm/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
+- Run `./sync_conventions.sh` to copy it into the plugin (`cmm-pm-skills/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
 
 ### After any skill/command change
 1. Run `python3 validate_plugins.py` from the repo root to check all plugins.

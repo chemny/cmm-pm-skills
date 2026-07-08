@@ -21,13 +21,20 @@ Stage ② of the pipeline. It answers: **what does the user really need — and 
 - Capture the current workaround and the **struggling moment** (when/why it hurts today).
 - Optionally apply the **opportunity-solution-tree** skill to connect the job to the outcome.
 
-## Step 2 — Inherit the persona & segment from market-analysis (①); do NOT re-derive it
-The data-grounded **user persona, typical scenarios, buyer/willingness-to-pay, and the viable target segment** are produced upstream in `/market-analysis` (①). **Insight consumes them — it does not re-invent who the user is.**
-- If that upstream input is **missing**, stop and say so: "需要先有 ① 的用户画像/可行人群，否则无法判断需求真假。" Don't fabricate a persona to proceed (CONVENTIONS §9).
-- If you have it, **restate the inherited segment + scenario in one line** as the basis, then drill into the specific need below.
-- Optionally refine the segment, but any refinement must be **sourced**, not invented, and flagged as a refinement of ①'s finding.
+## Step 2 — Segment path: inherit if available, intake if standalone
+Preferred path: inherit the data-grounded **user persona, typical scenarios, buyer/willingness-to-pay, and viable target segment** from `/market-analysis` (①). **Insight consumes them — it does not re-invent who the user is.**
 
-A fabricated persona/scenario, or "discovering" the user from scratch here, is a fail — that work belongs to ①.
+Standalone path (§0d): if ① is missing, do **not** stop by default. Enter a short intake and ask only the Class A fields needed for this stage:
+- target user / segment;
+- concrete usage situation;
+- geography;
+- commercial direction / who may pay.
+
+Then proceed with a clear caveat: **"缺少 ① 市场分析，上游画像/市场证据不足；本次只产出需求假设与一手验证计划。"** Any segment or scenario from the user is treated as user-provided input, not validated market fact. If the user cannot provide these fields, ask and wait; do not fabricate.
+
+If you have ①, **restate the inherited segment + scenario in one line** as the basis, then drill into the specific need below. Optional refinements must be **sourced**, not invented, and flagged as a refinement of ①'s finding.
+
+A fabricated persona/scenario, or silently "discovering" the user from scratch while pretending it came from ①, is a fail.
 
 ## Step 3 — Need hypothesis with graded evidence
 Apply the 4 tests, but **grade every claim** — do not assert:

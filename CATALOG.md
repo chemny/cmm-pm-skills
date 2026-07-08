@@ -1,8 +1,8 @@
-# CATALOG — cmm-pm 组件全表
+# CATALOG — cmm-pm-skills 组件全表
 
 > 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后重跑 `python3 generate_catalog.py`。
 
-**总览**：插件 `cmm-pm` ｜ 命令 46 ｜ 技能 70 ｜ 合计 116 个组件。
+**总览**：插件 `cmm-pm-skills` ｜ 命令 46 ｜ 技能 70 ｜ 合计 116 个组件。
 
 **覆盖率**：技能含 `scenarios` 70/70 ｜ 命令含 `outputs` 46/46（已全覆盖）。
 
@@ -16,7 +16,7 @@
 | `/battlecard` | Create a sales-ready competitive battlecard — positioning, feature comparison, objection handling, … |
 | `/brainstorm` | Brainstorm product ideas or experiments from PM, Designer, and Engineer perspectives — for existing… |
 | `/business-model` | Explore business models using Lean Canvas, Business Model Canvas, Startup Canvas, or Value Proposit… |
-| `/cmm-pm-skills` | cmm-pm-skills 总入口 —— 一句话上手整套产品经理工作流。可以从头做整套（市场→洞察→战略→PRD→设计→技术→故事→测试→上线→数据），也可以只做某一块（如只写 PRD）。它会先问清… |
+| `/cmm-pm-skills` | cmm-pm-skills 总入口 —— 一句话上手整套产品经理工作流。可以从头做整套（市场→洞察→战略→PRD→设计→故事→技术→测试→上线→数据），也可以只做某一块（如只写 PRD）。它会先问清… |
 | `/competitive-analysis` | Analyze the competitive landscape — identify competitors, compare strengths and weaknesses, find di… |
 | `/derive-tests` | Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-… |
 | `/document-app` | Reverse-engineer an AI-built codebase into the system documents reviewers and auditors need — a cor… |
@@ -47,7 +47,7 @@
 | `/stakeholder-map` | Map stakeholders on a Power × Interest grid and create a tailored communication plan |
 | `/strategy` | Decide how we win — positioning, moat, business model, pricing, growth, key tasks. Built on the per… |
 | `/tailor-resume` | Tailor a PM resume to a specific job description — keyword alignment, experience reframing, and str… |
-| `/tech-design` | Turn the PRD + UI spec + backlog into a technical design — tech stack (researched, not guessed), ar… |
+| `/tech-design` | Turn the PRD + UI spec + backlog into a technical design after stories are drafted — tech stack (re… |
 | `/test-scenarios` | Generate comprehensive test scenarios from user stories or feature specs — happy paths, edge cases,… |
 | `/transform-roadmap` | Convert a feature-based roadmap into an outcome-focused roadmap that communicates strategic intent |
 | `/triage-requests` | Analyze, categorize, and prioritize a batch of feature requests from customers or stakeholders |
@@ -55,7 +55,7 @@
 | `/wireframe` | Turn a PRD into a UI spec + clickable HTML prototype — Mermaid screen-flow/state diagrams, a self-c… |
 | `/write-prd` | Turn the validated need + strategy (①②③) into an engineering-ready PRD — or, if the need isn't vali… |
 | `/write-query` | Generate SQL queries from natural language — supports BigQuery, PostgreSQL, MySQL, and more |
-| `/write-stories` | Break a feature into backlog items — user stories, job stories, or WWA format with acceptance crite… |
+| `/write-stories` | Break a PRD + wireframe into backlog items — user stories, job stories, or WWA format with acceptan… |
 
 ## 技能（70）
 

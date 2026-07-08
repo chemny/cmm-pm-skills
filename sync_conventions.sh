@@ -5,7 +5,7 @@
 set -e
 cd "$(dirname "$0")"
 count=0
-for d in cmm-pm/; do
+for d in cmm-pm-skills/; do
   cp CONVENTIONS.md "${d}CONVENTIONS.md"
   echo "synced -> ${d}CONVENTIONS.md"
   count=$((count+1))

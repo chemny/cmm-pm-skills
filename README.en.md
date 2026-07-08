@@ -31,13 +31,13 @@ What you get is not talk but usable deliverables — a data-grounded market anal
 | ③ Strategy | `/strategy` | positioning / moat / business model / pricing / play |
 | ④ PRD | `/write-prd` | buildable PRD (need + features + flow + UX + data + edge cases) |
 | ⑤ UI design | `/wireframe` | Mermaid flow/state + clickable HTML prototype + spec |
-| ⑥ Tech design | `/tech-design` | stack / architecture / data / spike resolution / conflict check |
-| ⑦ User stories | `/write-stories` | stories + acceptance criteria (traceable) |
+| ⑥ User stories | `/write-stories` | stories + acceptance criteria (traceable) |
+| ⑦ Tech design | `/tech-design` | stack / architecture / data / spike resolution / conflict check |
 | ⑧ Testing | `/test-scenarios` | test cases (happy / edge / error) |
 | ⑩ Launch | `/plan-launch` etc. | GTM plan |
 | ⑪ Data/iterate | `/analyze-cohorts` etc. | metrics → back to ② |
 
-> Full overview in [PIPELINE.md](./PIPELINE.md); shared discipline in [CONVENTIONS.md](./CONVENTIONS.md). ⑥ implementation / ⑨ engineering are out of scope.
+> Full overview in [PIPELINE.md](./PIPELINE.md); shared discipline in [CONVENTIONS.md](./CONVENTIONS.md). ⑦ technical proposal / ⑨ engineering are out of scope.
 
 ## Platform Compatibility
 
@@ -49,7 +49,7 @@ This suite is a **single** Claude Code plugin — two lines to install:
 
 ```bash
 claude plugin marketplace add chemny/cmm-pm-skills
-claude plugin install cmm-pm@cmm-pm-skills
+claude plugin install cmm-pm-skills@cmm-pm-skills
 ```
 
 After installing, start a fresh agent session so it can rescan plugins.
@@ -97,7 +97,7 @@ cmm-pm-skills/
 ├── PIPELINE.md             full-pipeline overview
 ├── sync_conventions.sh     master → plugin sync
 ├── validate_plugins.py     contract validation
-├── cmm-pm/                 single plugin (46 commands + 70 skills + bundled CONVENTIONS copy)
+├── cmm-pm-skills/          single plugin (46 commands + 70 skills + bundled CONVENTIONS copy)
 ├── _design/                methodology blueprints / checklists
 └── _runs/                  end-to-end examples
 ```

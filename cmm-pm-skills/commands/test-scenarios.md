@@ -9,7 +9,7 @@ outputs: ["测试用例（happy/边界/错误）"]
 
 Turn user stories or feature descriptions into comprehensive test scenarios that QA can execute immediately. Covers happy paths, edge cases, error handling, and cross-browser/device considerations.
 
-> Stage ⑧. **Inherits the ⑦ backlog** (stories + AC); every scenario **traces to a story/AC**. **Do NOT write scenarios for spike-gated / undefined stories** — they're untestable until specified; scope to well-defined stories and say which were skipped. If input is missing, ask (no fabrication §9).
+> Stage ⑧. **Inherits the ⑥ backlog** (stories + AC) and ⑦ technical-design decisions where they resolve spike-gated items; every scenario **traces to a story/AC**. **Do NOT write scenarios for spike-gated / undefined stories** — they're untestable until specified; scope to well-defined stories and say which were skipped. If input is missing, ask (no fabrication §9).
 > **Collaborate (§0a/§0c)** and **follow [`CONVENTIONS.md`](../CONVENTIONS.md)**.
 
 ## Invocation

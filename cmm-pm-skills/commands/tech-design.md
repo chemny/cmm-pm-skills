@@ -1,12 +1,12 @@
 ---
-description: Turn the PRD + UI spec + backlog into a technical design — tech stack (researched, not guessed), architecture (Mermaid), data model, key technical decisions, and resolution of the backlog's spikes. A grounded proposal; final architecture is engineering's call.
+description: Turn the PRD + UI spec + backlog into a technical design after stories are drafted — tech stack (researched, not guessed), architecture (Mermaid), data model, key technical decisions, and resolution of the backlog's spikes. A grounded proposal; final architecture is engineering's call.
 argument-hint: "<the PRD / feature / spike to resolve>"
 outputs: ["选型/架构/数据/解spike/冲突检查"]
 ---
 
-# /tech-design -- Technical Design (⑥)
+# /tech-design -- Technical Design (⑦)
 
-Stage ⑥ of the full pipeline (between ⑤ design and ⑦ stories / before engineering builds). Turns **④ PRD + ⑤ UI spec + ⑦ backlog** into a technical design: how it gets built, and **resolution of the spike-gated unknowns** so the team can estimate and start.
+Stage ⑦ of the full pipeline (after ⑥ stories / before engineering builds). Turns **④ PRD + ⑤ UI spec + ⑥ backlog** into a technical design: how it gets built, and **resolution of the spike-gated unknowns** so the team can estimate and start.
 
 > **Scope honesty.** Technical design is traditionally engineering-owned. This skill produces a **grounded technical proposal** (a document) — enough to resolve spikes and let the team estimate. **Final architecture is engineering's call**; flag what needs a real POC.
 > **Research, don't guess (CONVENTIONS §4/§8).** Tech-stack / model / third-party choices (e.g. ASR, LLM) must be **searched and triangulated with real data** (capability, price, latency, limits) — never assert "use X" without evidence. Benchmarks/prices get sources or are marked 〔待 POC 验证〕.
@@ -15,7 +15,7 @@ Stage ⑥ of the full pipeline (between ⑤ design and ⑦ stories / before engi
 > **Follow [`CONVENTIONS.md`](../CONVENTIONS.md)**.
 
 ## Step 1 — Inherit & frame
-Pull from ④PRD (features, non-functional bars), ⑤UI spec (flows/screens), ⑦backlog (esp. the `?(spike)` items). Restate the **technical problems to solve** — including each spike.
+Pull from ④PRD (features, non-functional bars), ⑤UI spec (flows/screens), ⑥backlog (esp. the `?(spike)` items). Restate the **technical problems to solve** — including each spike.
 
 ## Step 2 — Resolve the spikes (the main value)
 For **every spike-gated item** in the backlog, produce a concrete technical approach: options (with researched evidence), a recommendation, the measurable validation it still needs (POC), and the rough effort it unlocks. This is what turns "?(spike)" into estimable work.
@@ -37,7 +37,7 @@ Cover: tech stack, architecture, data model, key decisions, interfaces, non-func
 Save as markdown. Use Mermaid for architecture/data-flow; **render diagrams to a viewable HTML** too (CONVENTIONS — don't leave Mermaid only in .md).
 ```
 # 技术方案：[产品]
-> 承接 ④PRD + ⑤界面 + ⑦backlog；这是技术提案，最终架构由工程定。
+> 承接 ④PRD + ⑤界面 + ⑥backlog；这是技术提案，最终架构由工程定。
 
 ## 1. 技术选型        平台/语言/框架/关键第三方(ASR/LLM…)，每项带对比依据/价格/限制
 ## 2. 系统架构        模块/组件/数据流（Mermaid 架构图）

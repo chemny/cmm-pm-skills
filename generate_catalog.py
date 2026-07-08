@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""生成 CATALOG.md —— cmm-pm 插件的命令/技能全表（自动盘点，计数永不漂）。
+"""生成 CATALOG.md —— cmm-pm-skills 插件的命令/技能全表（自动盘点，计数永不漂）。
 用法：在 repo 根跑 `python3 generate_catalog.py`。改了命令/技能后重跑即可。
 只读取，不修改命令/技能本身；唯一产物是 CATALOG.md。
 """
 import os, re, glob
 
-PLUGIN = "cmm-pm"
+PLUGIN = "cmm-pm-skills"
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -51,7 +51,7 @@ def main():
         return s if len(s) <= n else s[: n - 1] + "…"
 
     lines = []
-    lines.append("# CATALOG — cmm-pm 组件全表")
+    lines.append("# CATALOG — cmm-pm-skills 组件全表")
     lines.append("")
     lines.append("> 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后重跑 `python3 generate_catalog.py`。")
     lines.append("")

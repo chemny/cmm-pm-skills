@@ -1,5 +1,5 @@
 ---
-description: Break a feature into backlog items — user stories, job stories, or WWA format with acceptance criteria
+description: Break a PRD + wireframe into backlog items — user stories, job stories, or WWA format with acceptance criteria. Runs before technical design so spike-gated items can be resolved there.
 argument-hint: "[user|job|wwa] <feature description or PRD>"
 uses: [user-stories, job-stories]
 outputs: ["用户故事 + 验收标准（可追溯）"]
@@ -9,7 +9,7 @@ outputs: ["用户故事 + 验收标准（可追溯）"]
 
 Break a feature into well-structured backlog items. Choose from three formats based on your team's preference, each with full acceptance criteria.
 
-> Stage ⑦. **Inherits the ④ PRD + ⑤ wireframe** — stories come from the PRD's features/requirements and the wireframe's screens/states; **every story traces to a PRD requirement (no invented stories §9)**. If the PRD/wireframe is missing, ask — don't fabricate.
+> Stage ⑥. **Inherits the ④ PRD + ⑤ wireframe** — stories come from the PRD's features/requirements and the wireframe's screens/states; **every story traces to a PRD requirement (no invented stories §9)**. If the PRD/wireframe is missing, ask — don't fabricate.
 > **Collaborate (§0a/§0c):** confirm the story format with the user before generating; you assist, the user decides.
 > **Follow [`CONVENTIONS.md`](../CONVENTIONS.md)** for cross-cutting discipline (plain output, no-fabrication, coverage, red-team).
 
@@ -104,7 +104,8 @@ Save as markdown.
 
 ### Step 5: Offer Next Steps
 
-- "Want me to **generate test scenarios** for these stories?"
+- "Want me to **resolve the spike-gated items in a technical design**?"
+- "Want me to **generate test scenarios** for the well-defined stories?"
 - "Should I **create dummy data** for development and testing?"
 - "Want me to **estimate sprint capacity** for these stories?"
 - "Should I **convert to a different format** (user stories ↔ job stories ↔ WWA)?"

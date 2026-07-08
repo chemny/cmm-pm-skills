@@ -1,4 +1,4 @@
-# cmm-pm — CMM 产品经理工作流（单插件全套）
+# cmm-pm-skills — CMM 产品经理工作流（单插件全套）
 
 ## Overview / 总览
 
@@ -10,7 +10,7 @@
 
 ```bash
 claude plugin marketplace add chemny/cmm-pm-skills
-claude plugin install cmm-pm@cmm-pm-skills
+claude plugin install cmm-pm-skills@cmm-pm-skills
 ```
 
 安装后开一个新的 Agent 会话，让它重新扫描插件。
@@ -25,8 +25,8 @@ claude plugin install cmm-pm@cmm-pm-skills
 | `/strategy` | ③ 产品战略 |
 | `/write-prd` | ④ PRD |
 | `/wireframe` | ⑤ 界面设计 |
-| `/tech-design` | ⑥ 技术方案 |
-| `/write-stories` | ⑦ 用户故事 |
+| `/write-stories` | ⑥ 用户故事 |
+| `/tech-design` | ⑦ 技术方案 |
 | `/test-scenarios` | ⑧ 测试 |
 | `/plan-launch` `/battlecard` `/growth-strategy` | ⑩ 上线 |
 | `/analyze-cohorts` `/north-star` `/analyze-test` | ⑪ 数据/迭代 |
