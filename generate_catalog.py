@@ -46,6 +46,13 @@ def main():
         desc = frontmatter_field(os.path.join(d, "SKILL.md"), "description")
         skills.append((name, desc))
 
+    internal_capabilities = []
+    capability_dir = os.path.join(skill_dir, "main", "references", "capabilities")
+    for p in sorted(glob.glob(os.path.join(capability_dir, "*.md"))):
+        name = os.path.basename(p)[:-3]
+        desc = frontmatter_field(p, "description")
+        internal_capabilities.append((name, desc))
+
     def clip(s, n=100):
         s = s.replace("|", "\\|").replace("\n", " ")
         return s if len(s) <= n else s[: n - 1] + "…"
@@ -55,7 +62,7 @@ def main():
     lines.append("")
     lines.append("> 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后重跑 `python3 generate_catalog.py`。")
     lines.append("")
-    lines.append(f"**总览**：插件 `{PLUGIN}` ｜ 命令 {len(cmds)} ｜ 技能 {len(skills)} ｜ 合计 {len(cmds)+len(skills)} 个组件。")
+    lines.append(f"**总览**：插件 `{PLUGIN}` ｜ 命令 {len(cmds)} ｜ 一级技能 {len(skills)} ｜ 内部能力 {len(internal_capabilities)} ｜ 合计 {len(cmds)+len(skills)+len(internal_capabilities)} 个组件。")
     lines.append("")
     sc = sum(1 for p in sorted(glob.glob(os.path.join(skill_dir, "*/"))) if frontmatter_field(os.path.join(p, "SKILL.md"), "scenarios"))
     uo = sum(1 for p in sorted(glob.glob(os.path.join(cmd_dir, "*.md"))) if os.path.basename(p)[:-3].lower() != "readme" and frontmatter_field(p, "outputs"))
@@ -78,10 +85,20 @@ def main():
         lines.append(f"| `{name}` | {clip(desc)} |")
     lines.append("")
 
+    lines.append(f"## 内部能力（{len(internal_capabilities)}）")
+    lines.append("")
+    lines.append("> 由 `main` 或命令按需读取，不显示在一级 Skills 下拉菜单。")
+    lines.append("")
+    lines.append("| 能力 | 说明 |")
+    lines.append("|---|---|")
+    for name, desc in internal_capabilities:
+        lines.append(f"| `{name}` | {clip(desc)} |")
+    lines.append("")
+
     out = os.path.join(ROOT, "CATALOG.md")
     with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
-    print(f"✓ 已生成 CATALOG.md：命令 {len(cmds)} + 技能 {len(skills)} = {len(cmds)+len(skills)} 个组件")
+    print(f"✓ 已生成 CATALOG.md：命令 {len(cmds)} + 一级技能 {len(skills)} + 内部能力 {len(internal_capabilities)} = {len(cmds)+len(skills)+len(internal_capabilities)} 个组件")
 
 
 if __name__ == "__main__":

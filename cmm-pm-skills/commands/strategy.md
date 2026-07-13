@@ -5,6 +5,8 @@ uses: [pricing-strategy, monetization-strategy]
 outputs: ["定位/壁垒/商业模式/定价/打法"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /strategy -- Product Strategy (how we win)
 
 Stage ③ of the pipeline. It decides **"how we win"**: our positioning, moat, business model, pricing, growth, and the key tasks to execute. It turns the evidence from ①② into a defensible plan.

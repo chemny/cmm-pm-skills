@@ -1,113 +1,111 @@
 # cmm-pm-skills
 
-中文 | [English](./README.en.md)
+[中文](./README.zh.md) | English
 
-cmm-pm-skills 是一个面向产品经理、创始人、独立开发者和 Agent 用户的产品经理工作流 skills 套件。它把"从市场到落地"的每个阶段做成可调用的命令，把零散的想法和调研整理成真实可用的交付物（市场分析、PRD、原型、技术方案……），方便后续设计、研发、测试与上线继续使用。
+cmm-pm-skills is a product-manager workflow skill suite for PMs, founders, solo builders, and agent users. It turns every stage from market to launch into a callable command, and turns scattered ideas and research into real, usable deliverables (market analysis, PRD, prototype, tech design…) so later design, engineering, testing, and launch have a clearer starting point.
 
-它支持市场分析、需求洞察、产品战略、PRD 与界面/技术设计，也可以一路贯通到用户故事、测试、上线与数据迭代——所有阶段共享一套统一工作纪律。
+It supports market analysis, demand insight, product strategy, PRD, and UI/tech design, and it can run all the way through user stories, testing, launch, and data iteration — with every stage sharing one work discipline.
 
-## 适合谁使用？
+## Who Is This For?
 
-这个套件适合：
+This suite is designed for:
 
-- 用 Claude Code / Codex 做产品的**产品经理、创始人、独立开发者**；
-- 想要"从想法到 PRD 到原型"一条龙、且**每步有据可依、不被 AI 糊弄**的人；
-- 需要把零散调研沉淀成可交付、可追溯产物的个人或小团队。
+- **PMs, founders, and solo builders** using Claude Code / Codex;
+- Anyone who wants an idea → PRD → prototype pipeline where **every step is evidence-based and won't be hand-waved by the AI**;
+- Individuals or small teams who need scattered research distilled into deliverable, traceable artifacts.
 
-## 它能做什么？
+## What It Does
 
-通用 AI 给你一堆漂亮文字，但往往浅、爱编、容易跑偏。这套 skills 把产品经理各阶段做成命令，每步都遵循同一套纪律：继承上游不重造、自己搜证三角验证、不编造、结论交你拍板。
+Generic AI gives you fluent text that is often shallow, prone to fabrication, and drifts off-target. This suite turns each PM stage into a command that follows one discipline: inherit upstream (no re-invention), research and triangulate its own facts, never fabricate, and hand the decision to you.
 
-最终你得到的不是空话，而是能直接用的交付物——一份有数据支撑的市场分析、一份可开发的 PRD、一套可点击的原型、一份落地的技术方案。
+What you get is not talk but usable deliverables — a data-grounded market analysis, a buildable PRD, a clickable prototype, a grounded tech design.
 
-## 核心能力
+## Capabilities
 
-**总入口 `/cmm-pm-skills`** 让你一句话上手：从头做整套，或只做某一块（如只写 PRD）。它统筹项目状态台账（跨会话不丢）、按阶段守门（风险结论→你拍板）、领航下一步。下面是它统筹的各阶段——按产品研发实际顺序排列，前面是决定"做不做、怎么做"的关键阶段，后面是落地与迭代。
+**The entry command `/cmm-pm-skills`** gets you started in one line: run the whole pipeline, or just one stage (e.g. only a PRD). It keeps a per-project state ledger (no loss across sessions), gates each stage (risk verdict → you decide), and navigates the next step. The stages it coordinates are listed below in real product-development order: the stages that decide "whether and how to build" come first; delivery and iteration come later.
 
-| 阶段 | 命令 | 输出结果 |
-|---|---|---|
-| ① 市场分析 | `/market-analysis` | 市场/用户/买单人/竞品/颠覆机会（数据定） |
-| ② 需求洞察 | `/insight` | 真需求 + 风险结论 + 一手验证计划 |
-| ③ 产品战略 | `/strategy` | 定位/壁垒/商业模式/定价/打法 |
-| ④ PRD | `/write-prd` | 完整可开发 PRD（需求+功能+流程+交互+数据+边界） |
-| ⑤ 界面设计 | `/wireframe` | Mermaid 流/态 + 可点击 HTML 原型 + 规格 |
-| ⑥ 用户故事 | `/write-stories` | 故事 + 验收（可追溯） |
-| ⑦ 技术方案 | `/tech-design` | 选型/架构/数据/解 spike/冲突检查 |
-| ⑧ 测试 | `/test-scenarios` | 测试用例（happy/边界/错误） |
-| ⑩ 上线 | `/plan-launch` 等 | GTM 计划 |
-| ⑪ 数据/迭代 | `/analyze-cohorts` 等 | 指标 → 回到 ② |
+| Capability | What it helps you do |
+|---|---|
+| Market analysis (`/market-analysis`) | Ground market, users, buyers, competitors, and disruption opportunities in evidence. |
+| Demand insight (`/insight`) | Separate real needs from assumptions and define a primary-validation plan. |
+| Product strategy (`/strategy`) | Decide positioning, moat, business model, pricing, and strategic trade-offs. |
+| PRD (`/write-prd`) | Produce buildable requirements covering features, flow, UX, data, and edge cases. |
+| UI design (`/wireframe`) | Create flows, states, clickable HTML prototypes, and implementation-ready specs. |
+| User stories (`/write-stories`) | Break requirements into traceable stories and acceptance criteria. |
+| Tech design (`/tech-design`) | Ground stack, architecture, data, spikes, and implementation conflicts. |
+| Testing (`/test-scenarios`) | Cover happy paths, boundaries, and failure cases. |
+| Launch (`/plan-launch`) | Build a focused go-to-market plan. |
+| Data iteration (`/analyze-cohorts`) | Turn product metrics into the next discovery cycle. |
 
-> 完整说明见 [PIPELINE.md](./PIPELINE.md)；统一纪律见 [CONVENTIONS.md](./CONVENTIONS.md)。⑦技术方案实现/⑨研发属工程，不在本套件。
+> Full overview in [PIPELINE.md](./PIPELINE.md); shared discipline in [CONVENTIONS.md](./CONVENTIONS.md). ⑦ technical proposal / ⑨ engineering are out of scope.
 
-## 平台兼容性
+## Platform Compatibility
 
-Claude Code 支持命令 + 技能；Codex CLI 支持技能（以自然语言描述触发）；其他 Agent（Cursor / Gemini CLI 等）可复制 `skills/` 目录使用技能。
+Compatible with Claude Code, Codex, and OpenClaw. Claude Code exposes commands and skills; Codex exposes 13 focused skills, including `CMM PM Skills: Main`; OpenClaw discovers `main` as a model-visible, command-ready skill. The other 58 specialist methods stay available through internal routing.
 
-## 安装
+## Install
 
-本套件是**单个** Claude Code 插件，两行装好：
-
-```bash
-claude plugin marketplace add chemny/cmm-pm-skills
-claude plugin install cmm-pm-skills@cmm-pm-skills
-```
-
-安装后开一个新的 Agent 会话，让它重新扫描插件。
-
-## 快速开始
-
-装完只需记**一个**命令——对 Agent 说：
+Ask your current Agent to install and verify the repository for the client you are using:
 
 ```text
-/cmm-pm-skills
+Install https://github.com/chemny/cmm-pm-skills for my current Agent client. Detect the correct plugin or skill location, install the suite, verify that CMM PM Skills: Main is discoverable, and report the result.
 ```
 
-预期结果：
+## Quick Start
+
+Start with the main entry. In Codex, select the skill; in Claude Code, use the command:
 
 ```text
-它会问你想怎么开始（从头做整套，还是只做某一块，比如只写 PRD），
-按你说的直接动手；每个阶段结尾给风险结论、由你拍板再进下一步。
-不用看说明书。老手也可直接敲单个命令，如 /write-prd 你的想法。
+Codex: CMM PM Skills: Main
+Claude Code: /cmm-pm-skills
 ```
 
-## 使用示例
-
-端到端真实案例见 [`_runs/`](./_runs)：
+Expected result:
 
 ```text
-_runs/voice-ime/   —— "sayit"（个性化语音输入法）从市场分析到 PRD/原型/技术方案的全过程
+It asks how you want to start (run the whole pipeline, or just one stage like a PRD),
+then gets to work; each stage ends with a risk verdict for you to approve before moving on.
+No manual needed. Power users can also call a single command directly, e.g. /write-prd your idea.
+```
+
+## Usage Examples
+
+Real end-to-end cases in [`_runs/`](./_runs):
+
+```text
+_runs/voice-ime/   — "sayit" (a personalized voice input method): market analysis → PRD / prototype / tech design
 ```
 
 ```text
-_runs/natgeo-video/  —— "英文文章转视频学习工具"的市场分析与需求洞察
+_runs/natgeo-video/  — an "English-article-to-video learning tool": market analysis and demand insight
 ```
 
-## 工作原理
+## How It Works
 
-- **总入口 `/cmm-pm-skills`** 一句话分流：整套领航，或单块直奔；
-- **命令 = 阶段动作**，继承上游产出、也能单独调用（§0d）；
-- **统一纪律**写在根 `CONVENTIONS.md`（母版），插件内置同步副本，安装即继承；
-- 每个阶段：先研究/搜证 → 给结论与风险 → 决定权交用户。
+- **Entry `/cmm-pm-skills`** routes you in one line: guide the whole pipeline, or jump straight to one stage;
+- **Commands = stage actions**, inheriting upstream output and also callable standalone (§0d);
+- The **shared discipline** lives in the root `CONVENTIONS.md` (master); the plugin carries a synced copy, so it's inherited on install;
+- Every stage: research → conclusion + risks → the decision is yours.
 
-## 仓库结构
+## Repository Structure
 
 ```text
 cmm-pm-skills/
-├── CONVENTIONS.md          统一纪律（母版）
-├── PIPELINE.md             全链路总览
-├── sync_conventions.sh     母版→插件同步
-├── validate_plugins.py     契约校验
-├── cmm-pm-skills/          单插件（46 命令 + 70 技能 + 内置 CONVENTIONS 副本）
-├── _design/                方法论蓝图 / 清单
-└── _runs/                  端到端示例
+├── CONVENTIONS.md          shared discipline (master)
+├── PIPELINE.md             full-pipeline overview
+├── sync_conventions.sh     master → plugin sync
+├── validate_plugins.py     contract validation
+├── cmm-pm-skills/          single plugin (46 commands + 13 visible skills + 58 internal capabilities)
+├── _design/                methodology blueprints / checklists
+└── _runs/                  end-to-end examples
 ```
 
-## 运行要求
+## Requirements
 
-- Claude Code 或 Codex CLI；
-- 部分命令需联网搜索（市场/竞品研究）；
-- 可选：用于发布的 GitHub CLI（`gh`）。
+- Claude Code or Codex CLI;
+- Some commands need web search (market / competitor research);
+- Optional: GitHub CLI (`gh`) for publishing.
 
-## 协议
+## License
 
-MIT。见 [LICENSE](./LICENSE)。本项目改编自 [phuryn/pm-skills](https://github.com/phuryn/pm-skills)（MIT），原作者版权已在 LICENSE 中保留。
+MIT. See [LICENSE](./LICENSE). Adapted from [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT); the original copyright is retained in LICENSE.

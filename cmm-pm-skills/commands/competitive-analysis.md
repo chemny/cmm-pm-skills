@@ -5,6 +5,8 @@ uses: [competitor-analysis]
 outputs: ["竞争格局与差异化机会"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /competitive-analysis -- Competitive Landscape Analysis
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

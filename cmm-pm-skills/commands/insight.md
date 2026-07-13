@@ -5,6 +5,8 @@ uses: [opportunity-solution-tree]
 outputs: ["真需求(JTBD)+风险结论+一手验证计划"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /insight -- 需求洞察 (Demand Insight)
 
 Stage ② of the pipeline. It answers: **what does the user really need — and what would it actually take to KNOW it's real?** Input: the market-analysis conclusion (or a raw idea). Output: a graded need hypothesis + a primary-research validation plan.

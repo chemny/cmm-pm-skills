@@ -5,6 +5,8 @@ uses: [review-resume]
 outputs: ["按JD定制的简历"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /tailor-resume -- Resume-to-JD Optimization
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

@@ -5,6 +5,8 @@ uses: [cohort-analysis]
 outputs: ["留存与采纳分析报告"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /analyze-cohorts -- Cohort Analysis
 
 > ⑪ 数据/迭代。**结论回灌 ② insight(闭环)；基于真实数据，不编数**(§9)。

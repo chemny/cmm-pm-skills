@@ -5,6 +5,8 @@ uses: [user-stories, job-stories]
 outputs: ["用户故事 + 验收标准（可追溯）"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /write-stories -- Backlog Item Generator
 
 Break a feature into well-structured backlog items. Choose from three formats based on your team's preference, each with full acceptance criteria.

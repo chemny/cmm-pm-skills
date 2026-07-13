@@ -5,6 +5,8 @@ uses: [privacy-policy]
 outputs: ["隐私政策"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /privacy-policy -- Privacy Policy Generator
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

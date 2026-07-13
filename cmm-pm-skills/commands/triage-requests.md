@@ -5,6 +5,8 @@ uses: [analyze-feature-requests, prioritize-features]
 outputs: ["需求分类+优先级"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /triage-requests -- Feature Request Triage
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

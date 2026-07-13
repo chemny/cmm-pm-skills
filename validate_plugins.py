@@ -286,8 +286,8 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
     return result
 
 
-def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> ValidationResult:
-    """Check that commands reference skills that actually exist in this plugin."""
+def validate_cross_references(plugin_dir: str, skill_names: list[str], internal_capability_names: list[str]) -> ValidationResult:
+    """Check that commands reference visible skills or internal capabilities in this plugin."""
     result = ValidationResult()
     cmds_dir = os.path.join(plugin_dir, "commands")
 
@@ -304,8 +304,8 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> Valida
         # Find skill references like **skill-name** skill
         refs = re.findall(r'\*\*(\w[\w-]+)\*\*\s+skill', content)
         for ref in refs:
-            if ref not in skill_names:
-                result.warn(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+            if ref not in skill_names and ref not in internal_capability_names:
+                result.warn(f"Command {cmd_file} references capability '{ref}' not found in this plugin")
 
     return result
 
@@ -333,6 +333,16 @@ def validate_plugin(plugin_dir: str) -> dict:
     results["sections"]["skills"] = skill_results
     results["skill_count"] = len(skill_names)
 
+    internal_capability_dir = os.path.join(skills_dir, "main", "references", "capabilities")
+    internal_capability_names = []
+    if os.path.isdir(internal_capability_dir):
+        internal_capability_names = sorted(
+            os.path.splitext(name)[0]
+            for name in os.listdir(internal_capability_dir)
+            if name.endswith(".md")
+        )
+    results["internal_capability_count"] = len(internal_capability_names)
+
     # 3. Commands
     cmds_dir = os.path.join(plugin_dir, "commands")
     cmd_results = {}
@@ -348,7 +358,9 @@ def validate_plugin(plugin_dir: str) -> dict:
     results["sections"]["readme"] = validate_readme(plugin_dir)
 
     # 5. Cross-references
-    results["sections"]["cross-refs"] = validate_cross_references(plugin_dir, skill_names)
+    results["sections"]["cross-refs"] = validate_cross_references(
+        plugin_dir, skill_names, internal_capability_names
+    )
 
     return results
 

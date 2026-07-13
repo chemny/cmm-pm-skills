@@ -32,18 +32,20 @@ cmm-pm-skills/                       <- repo root (marketplace)
     ├── CONVENTIONS.md               <- synced copy (ships with the plugin)
     ├── README.md                    <- plugin documentation
     ├── commands/{command}.md        <- 46 commands (one file each)
-    └── skills/{skill}/SKILL.md      <- 70 skills (one folder each)
+    ├── skills/{skill}/SKILL.md      <- 13 user-facing skills
+    └── skills/main/references/capabilities/*.md <- 58 internal capabilities
 ```
 
 ### Single plugin: `cmm-pm-skills`
 
-The whole suite is now **one plugin** (`cmm-pm-skills`) — 46 commands + 70 skills. Earlier it was 10 separate `pm-*` plugins; they were merged so users install once (`cmm-pm-skills@cmm-pm-skills`) and get everything, with `/cmm-pm-skills` as the single entry command. Because everything is one plugin, all command↔skill references are intra-plugin (the old "no cross-plugin references" caution no longer constrains the suite).
+The whole suite is now **one plugin** (`cmm-pm-skills`) — 46 commands + 13 user-facing skills + 58 internal capabilities. Earlier it was 10 separate `pm-*` plugins; they were merged so users install once (`cmm-pm-skills@cmm-pm-skills`) and get everything, with `/cmm-pm-skills` and `main` as the command and skill entry points. Because everything is one plugin, all command↔capability references are intra-plugin.
 
 Capability groups inside the plugin: orchestration (`/cmm-pm-skills` + `pipeline-orchestration`), market research, product discovery, product strategy, execution (PRD/wireframe/tech-design/stories/tests/OKRs/roadmap…), go-to-market, data analytics, marketing/growth, AI-shipping, and a PM toolkit.
 
 ## Key Design Rules
 
-- **Skills = nouns/concepts.** Frameworks and analytical knowledge Claude auto-loads when the topic matches (`lean-canvas`, `pre-mortem`, `market-sizing`).
+- **User-facing Skills = high-frequency outcomes.** Keep the picker concise: `main` plus 12 common standalone PM tasks.
+- **Internal capabilities = specialist methods.** Frameworks such as `lean-canvas`, `pre-mortem`, and `market-sizing` live under `skills/main/references/capabilities/` and are loaded on demand by `main` or commands.
 - **Commands = verbs.** User-triggered workflows that chain one or more skills (`/write-prd`, `/discover`, `/plan-launch`).
 - **No cross-plugin references.** Commands suggest follow-ups in natural language only ("Want me to design growth loops?"). Never hard-reference a command from another plugin — plugins install independently, so a hard reference can break.
 - **Intra-plugin "Uses" references are fine** — skills and commands in the same plugin always ship together.
@@ -51,7 +53,7 @@ Capability groups inside the plugin: orchestration (`/cmm-pm-skills` + `pipeline
 - **Frontmatter required:** Skills need `name` + `description`; commands need `description` + `argument-hint`.
 - **Frontmatter recommended (better triggering + discoverability):** skills add `scenarios:` (≈3 example user utterances, inline YAML list) to sharpen auto-loading; commands add `outputs:` (and `uses:` when they apply a named skill). Coverage is tracked in `CATALOG.md` (`覆盖率` line); roll out across all components incrementally — these are inline-flow YAML lists so the validator parses them.
 - A skill's `name` **must match its directory name**.
-- Skills can be force-loaded with `/plugin-name:skill-name` or `/skill-name`.
+- User-facing skills can be force-loaded with `/plugin-name:skill-name` or `/skill-name`; internal capabilities are requested through `main` or a command by name.
 - Keep frontmatter lean (always loaded); put detail in the SKILL.md body (loaded when triggered) — progressive disclosure.
 
 ## What's Visible Where
@@ -68,9 +70,8 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 
 ## Versioning
 
-- All versions are currently **2.0.0** — `marketplace.json` and all 9 `plugin.json` files.
-- **Keep every version in sync.** There is no independent per-plugin versioning.
-- Bump any `plugin.json` → also bump `marketplace.json`, and vice-versa (bump all 9 to match).
+- The marketplace package and plugin use independent semantic versions. Bump both for a structural release.
+- Current structural release: marketplace **0.4.1**, plugin **2.0.1**.
 
 ## Article Links in Skills (Further Reading)
 

@@ -5,6 +5,8 @@ uses: [ab-test-analysis]
 outputs: ["AB测试结论+上线建议"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /analyze-test -- A/B Test Analysis
 
 > ⑪ 数据。**A/B 结果要真实、诚实解读：不显著就标不显著，不许夸大**(§6/§9)。

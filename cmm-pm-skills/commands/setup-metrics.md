@@ -5,6 +5,8 @@ uses: [metrics-dashboard]
 outputs: ["产品指标看板设计"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /setup-metrics -- Product Metrics Dashboard Design
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

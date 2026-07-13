@@ -5,6 +5,8 @@ uses: [north-star-metric]
 outputs: ["北极星+输入指标"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /north-star -- North Star Metric Definition
 
 > **继承 ③ 战略。北极星要反映战略的真实价值，不是虚荣指标；绑到真实用户价值**。

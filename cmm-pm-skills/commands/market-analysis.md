@@ -5,6 +5,8 @@ uses: [competitor-analysis, market-sizing, user-personas]
 outputs: ["市场/用户/买单人/竞品/颠覆机会（数据定）"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /market-analysis -- Market Analysis (Five Looks / 五看)
 
 Produce a stereoscopic, decision-grade market analysis for **$ARGUMENTS**.

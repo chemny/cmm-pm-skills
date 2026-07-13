@@ -5,6 +5,8 @@ uses: [pre-mortem]
 outputs: ["事前验尸风险清单"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /pre-mortem -- Pre-Launch Risk Analysis
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

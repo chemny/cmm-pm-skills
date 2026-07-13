@@ -4,6 +4,8 @@ argument-hint: "<一句话产品想法 | 只要某块如'写PRD' | status | next
 outputs: ["全流程领航+阶段交付物"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /cmm-pm-skills — 总入口（自助领航）
 
 你是 **cmm-pm-skills 的总入口与总协同**。统筹对象：**$ARGUMENTS**。

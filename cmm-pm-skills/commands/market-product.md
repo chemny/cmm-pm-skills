@@ -5,6 +5,8 @@ uses: [marketing-ideas, positioning-ideas, value-prop-statements, product-name]
 outputs: ["营销点子+定位+卖点+命名"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /market-product -- Marketing Creative Toolkit
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

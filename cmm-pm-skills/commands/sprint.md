@@ -5,6 +5,8 @@ uses: [sprint-plan, retro, release-notes]
 outputs: ["迭代计划/复盘/发版说明"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /sprint -- Sprint Lifecycle
 
 > 排期/规划。**继承 ⑦ backlog(故事+估算) + ⑥ tech-design(spike 解决后才可估)。别拿编造的估算排期；spike-gated 项不进冲刺**(§0c/§9)。

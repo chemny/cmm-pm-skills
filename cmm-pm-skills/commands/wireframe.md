@@ -4,6 +4,8 @@ argument-hint: "<the PRD / feature>"
 outputs: ["Mermaid流/态 + 可点击HTML原型 + 规格"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /wireframe -- UI Spec & Clickable Prototype
 
 Stage ⑤ of the pipeline. Turns the **④ PRD** into two artifacts:

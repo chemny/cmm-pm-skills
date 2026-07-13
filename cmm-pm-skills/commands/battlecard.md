@@ -5,6 +5,8 @@ uses: [competitive-battlecard]
 outputs: ["竞品对打battlecard"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /battlecard -- Competitive Battlecard
 
 > **继承 ① 竞争格局 + ③ 差异化。竞品事实必须搜证/三角验证，不许臆断**(§4)。

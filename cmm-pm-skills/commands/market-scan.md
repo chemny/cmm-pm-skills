@@ -5,6 +5,8 @@ uses: [swot-analysis, pestle-analysis, porters-five-forces, ansoff-matrix]
 outputs: ["宏观环境四合一扫描"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /market-scan -- Macro Environment Analysis
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

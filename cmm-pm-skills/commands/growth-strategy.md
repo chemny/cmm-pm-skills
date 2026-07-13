@@ -5,6 +5,8 @@ uses: [growth-loops, gtm-motions]
 outputs: ["增长闭环+渠道打法"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /growth-strategy -- Growth Loops & GTM Motions
 
 > ⑩ 增长。**继承 ③ 战略 + ① 市场(颠覆向量)。打法服务护城河，落到真实渠道/数据，别拍脑袋**(§4)。

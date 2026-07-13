@@ -5,6 +5,8 @@ uses: [beachhead-segment, ideal-customer-profile, gtm-strategy]
 outputs: ["完整GTM上市计划"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /plan-launch -- Go-to-Market Strategy
 
 > ⑩ 上线/GTM。**继承 ③ 战略(定位/壁垒/商业模式) + ④ PRD。上线是执行战略，不在这里另造定位**(§0b)。

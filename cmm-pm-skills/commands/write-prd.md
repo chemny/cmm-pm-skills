@@ -5,6 +5,8 @@ uses: [create-prd]
 outputs: ["可开发PRD（需求/功能/流程/交互/数据/边界）"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /write-prd -- Product Requirements Document (execution)
 
 Stage ④ of the pipeline. Turns the validated need + positioning/strategy from ①②③ into an engineering-ready spec: **what to build, to what bar, in what phases.**

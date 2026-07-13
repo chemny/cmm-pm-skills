@@ -5,6 +5,8 @@ uses: [test-scenarios]
 outputs: ["测试用例（happy/边界/错误）"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /test-scenarios -- Test Scenario Generator
 
 Turn user stories or feature descriptions into comprehensive test scenarios that QA can execute immediately. Covers happy paths, edge cases, error handling, and cross-browser/device considerations.

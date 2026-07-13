@@ -4,6 +4,8 @@ argument-hint: "<repo path or area; defaults to the whole repository>"
 outputs: ["静态性能审计报告"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /performance-audit-static -- Find What Won't Scale
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

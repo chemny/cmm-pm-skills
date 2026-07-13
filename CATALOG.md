@@ -2,9 +2,9 @@
 
 > 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后重跑 `python3 generate_catalog.py`。
 
-**总览**：插件 `cmm-pm-skills` ｜ 命令 46 ｜ 技能 70 ｜ 合计 116 个组件。
+**总览**：插件 `cmm-pm-skills` ｜ 命令 46 ｜ 一级技能 13 ｜ 内部能力 58 ｜ 合计 117 个组件。
 
-**覆盖率**：技能含 `scenarios` 70/70 ｜ 命令含 `outputs` 46/46（已全覆盖）。
+**覆盖率**：技能含 `scenarios` 12/13 ｜ 命令含 `outputs` 46/46（其余为长尾，逐批补全）。
 
 ## 命令（46）
 
@@ -57,9 +57,29 @@
 | `/write-query` | Generate SQL queries from natural language — supports BigQuery, PostgreSQL, MySQL, and more |
 | `/write-stories` | Break a PRD + wireframe into backlog items — user stories, job stories, or WWA format with acceptan… |
 
-## 技能（70）
+## 技能（13）
 
 | 技能 | 说明 |
+|---|---|
+| `cohort-analysis` | Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and se… |
+| `competitor-analysis` | Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direc… |
+| `create-prd` | Create a Product Requirements Document using a comprehensive 8-section template covering problem, o… |
+| `gtm-strategy` | Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch … |
+| `interview-script` | Create a structured customer interview script with JTBD probing questions, warm-up, core exploratio… |
+| `main` | CMM PM Skills 总入口与总控。用于从产品想法开始完整产品经理流程、继续已有项目、查看状态或下一步，也用于用户只想完成 PRD、市场分析、战略、复盘、WWA 工作项等某一个单项任务，或不知… |
+| `pricing-strategy` | Analyze and design pricing strategies including pricing models, competitive pricing analysis, willi… |
+| `prioritize-features` | Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with t… |
+| `product-strategy` | Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segme… |
+| `retro` | Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action … |
+| `sprint-plan` | Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identificatio… |
+| `test-scenarios` | Create comprehensive test scenarios from user stories with test objectives, starting conditions, us… |
+| `user-stories` | Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with… |
+
+## 内部能力（58）
+
+> 由 `main` 或命令按需读取，不显示在一级 Skills 下拉菜单。
+
+| 能力 | 说明 |
 |---|---|
 | `ab-test-analysis` | Analyze A/B test results with statistical significance, sample size validation, confidence interval… |
 | `analyze-feature-requests` | Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, an… |
@@ -71,22 +91,17 @@
 | `brainstorm-ideas-new` | Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer per… |
 | `brainstorm-okrs` | Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable… |
 | `business-model` | Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, do… |
-| `cohort-analysis` | Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and se… |
 | `competitive-battlecard` | Create sales-ready competitive battlecards comparing your product against a specific competitor — p… |
-| `competitor-analysis` | Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direc… |
-| `create-prd` | Create a Product Requirements Document using a comprehensive 8-section template covering problem, o… |
 | `customer-journey-map` | Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and oppo… |
 | `draft-nda` | Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdict… |
 | `dummy-dataset` | Generate realistic dummy datasets for testing with customizable columns, constraints, and output fo… |
 | `grammar-check` | Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the… |
 | `growth-loops` | Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, C… |
 | `gtm-motions` | Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Com… |
-| `gtm-strategy` | Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch … |
 | `ideal-customer-profile` | Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, an… |
 | `identify-assumptions-existing` | Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viabi… |
 | `identify-assumptions-new` | Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, … |
 | `intended-vs-implemented` | The method for finding the gap between what a system is supposed to do and what the code actually d… |
-| `interview-script` | Create a structured customer interview script with JTBD probing questions, warm-up, core exploratio… |
 | `job-stories` | Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format … |
 | `lean-canvas` | Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, chan… |
 | `market-segments` | Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use whe… |
@@ -102,21 +117,16 @@
 | `porters-five-forces` | Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of… |
 | `positioning-ideas` | Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors an… |
 | `pre-mortem` | Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems)… |
-| `pricing-strategy` | Analyze and design pricing strategies including pricing models, competitive pricing analysis, willi… |
 | `prioritization-frameworks` | Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates —… |
 | `prioritize-assumptions` | Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when tri… |
-| `prioritize-features` | Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with t… |
 | `privacy-policy` | Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance consideratio… |
 | `product-name` | Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audi… |
-| `product-strategy` | Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segme… |
 | `product-vision` | Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns s… |
 | `release-notes` | Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summa… |
-| `retro` | Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action … |
 | `review-resume` | Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, key… |
 | `self-assessment` | Honestly assess our own capabilities, resources, strengths, weaknesses, and the gap versus incumben… |
 | `sentiment-analysis` | Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfacti… |
 | `shipping-artifacts` | The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A… |
-| `sprint-plan` | Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identificatio… |
 | `sql-queries` | Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and … |
 | `stakeholder-map` | Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant… |
 | `startup-canvas` | Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + reven… |
@@ -124,10 +134,8 @@
 | `summarize-interview` | Summarize a customer interview transcript into a structured template with JTBD, satisfaction signal… |
 | `summarize-meeting` | Summarize a meeting transcript into structured notes with date, participants, topic, key decisions,… |
 | `swot-analysis` | Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionabl… |
-| `test-scenarios` | Create comprehensive test scenarios from user stories with test objectives, starting conditions, us… |
 | `user-personas` | Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpecte… |
 | `user-segmentation` | Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct… |
-| `user-stories` | Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with… |
 | `value-prop-statements` | Generate value proposition statements for marketing, sales, and onboarding from existing value prop… |
 | `value-proposition` | Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What… |
 | `wwas` | Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items … |

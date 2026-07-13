@@ -5,6 +5,8 @@ uses: [intended-vs-implemented]
 outputs: ["静态安全审计报告"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /security-audit-static -- Audit the Code You Already Have
 
 > Follows [`CONVENTIONS.md`](../CONVENTIONS.md) — repo-wide work discipline (assistant role, no-fabrication, research+triangulate, depth, plain output, red-team).

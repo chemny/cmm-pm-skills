@@ -4,6 +4,8 @@ argument-hint: "<the PRD / feature / spike to resolve>"
 outputs: ["选型/架构/数据/解spike/冲突检查"]
 ---
 
+> **Capability loading:** For each capability named in `uses`, use its visible Skill when present; otherwise read `../skills/main/references/capabilities/<name>.md` completely before applying it.
+
 # /tech-design -- Technical Design (⑦)
 
 Stage ⑦ of the full pipeline (after ⑥ stories / before engineering builds). Turns **④ PRD + ⑤ UI spec + ⑥ backlog** into a technical design: how it gets built, and **resolution of the spike-gated unknowns** so the team can estimate and start.
