@@ -16,6 +16,7 @@ Framework: **Five Looks (五看)** — the research half of Huawei's Five Looks 
 > Golden rule: this command DESCRIBES the world (industry, market, competitors, our own position). It does NOT decide our moat, pricing, or go-to-market — those are Three Decisions (三定), handled in `/strategy`.
 
 > **Follow [`CONVENTIONS.md`](../CONVENTIONS.md) for all cross-cutting discipline** (how to ask for inputs, atomic keyword, classify-by-category, search/source rules, depth bar, honesty/bear-case, methodology-backstage, red-team self-check). This file only adds the **market-analysis-specific** structure below.
+> **Research gate (mandatory):** Before searching, read and execute [`Deep Research Contract`](../skills/main/references/contracts/deep-research-contract.md) at `standard` or `full` intensity. Create the research ledger, classify market maturity, and do not deliver while `research_gate=revise/blocked`.
 
 ## Invocation
 
@@ -58,6 +59,8 @@ A vague brief produces a vague report. Before research, **split fields into two 
 Each Look = a set of targeted searches + a conclusion. Describe reality; do not insert our decisions yet.
 
 > **Before searching, build a research plan (CONVENTIONS §4):** list the concrete data fields each Look must fill — including the **target sub-market** size/growth (not just the broad market), per-competitor fields, and per-segment scenario data. Fill every field; triangulate (≥3 sources / ≥2 classes per key claim). **Before delivering, do a gap scan and loop back with delta-queries** to fill anything missing/single-source (CONVENTIONS §8). Coverage is by design, not luck.
+
+For `emerging/frontier` markets, missing authoritative TAM/share data is not an automatic failure. Follow the contract's evidence ladder and `pass-emerging` gate: use multiple strong proxies, expose uncertainty, and prevent downstream claims from becoming stronger than the evidence.
 
 ### Look 1 — Industry / Trend (看行业)
 - Is the market rising or falling? Growth rate, drivers, lifecycle stage, technology and policy shifts.
@@ -123,6 +126,7 @@ Produce the report with these sections (plain headings, in the user's language),
 ## 风险与挑战        (为什么这事可能是坑)
 ## 结论与建议        (权衡"巨头强项 vs 颠覆向量"后给倾向；**不得因"有巨头"就否定**)
 ### 数据来源          (含可信度标注)
+### 研究状态          (as-of日期 / 市场成熟度 / Research Gate / 关键缺口；不暴露冗长后台过程)
 ```
 
 ## Next Steps

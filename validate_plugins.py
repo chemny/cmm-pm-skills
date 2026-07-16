@@ -310,6 +310,89 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str], internal_
     return result
 
 
+def validate_deep_research_contract(plugin_dir: str) -> ValidationResult:
+    """Enforce the research contract, stage wrappers, and anti-bypass rules."""
+    result = ValidationResult()
+    contract_rel = "skills/main/references/contracts/deep-research-contract.md"
+    contract_path = os.path.join(plugin_dir, contract_rel)
+
+    if not os.path.isfile(contract_path):
+        result.error(f"Missing Deep Research contract: {contract_rel}")
+        return result
+
+    contract = Path(contract_path).read_text(encoding="utf-8")
+    for token in [
+        "pass-strong",
+        "pass-emerging",
+        "pass-with-gaps",
+        "research_gate",
+        "research_intensity",
+        "evidence_maturity",
+        "delta_queries",
+        "quick | standard | full",
+        "新兴市场可以数据不全，但不能搜索不全",
+    ]:
+        if token not in contract:
+            result.error(f"Deep Research contract missing required rule/token: {token}")
+
+    required_stage_files = [
+        "market-analysis.md",
+        "insight.md",
+        "write-prd.md",
+        "tech-design.md",
+    ]
+    for filename in required_stage_files:
+        path = os.path.join(plugin_dir, "commands", filename)
+        if not os.path.isfile(path):
+            result.error(f"Missing research-bearing stage wrapper: commands/{filename}")
+            continue
+        content = Path(path).read_text(encoding="utf-8")
+        if "deep-research-contract.md" not in content:
+            result.error(f"commands/{filename} does not load the Deep Research contract")
+        if "Research gate" not in content and "research_gate" not in content:
+            result.error(f"commands/{filename} does not expose a research gate")
+        if "standard" not in content and "full" not in content:
+            result.error(f"commands/{filename} does not state research intensity")
+
+    main_path = os.path.join(plugin_dir, "skills", "main", "SKILL.md")
+    if os.path.isfile(main_path):
+        main_content = Path(main_path).read_text(encoding="utf-8")
+        for wrapper in ["market-analysis.md", "insight.md", "write-prd.md", "tech-design.md"]:
+            if wrapper not in main_content:
+                result.error(f"main/SKILL.md missing mandatory stage route: {wrapper}")
+        if "禁止旁路" not in main_content:
+            result.error("main/SKILL.md missing anti-bypass rule")
+
+    pipeline_path = os.path.join(
+        plugin_dir, "skills", "main", "references", "capabilities", "pipeline-orchestration.md"
+    )
+    if os.path.isfile(pipeline_path):
+        pipeline = Path(pipeline_path).read_text(encoding="utf-8")
+        for token in ["research_gate", "decision_gate", "pass-emerging"]:
+            if token not in pipeline:
+                result.error(f"pipeline-orchestration missing dual-gate token: {token}")
+        if " gate:" in pipeline:
+            result.error("pipeline-orchestration still contains legacy gate fields in examples")
+
+    competitor_path = os.path.join(plugin_dir, "skills", "competitor-analysis", "SKILL.md")
+    if os.path.isfile(competitor_path):
+        competitor = Path(competitor_path).read_text(encoding="utf-8")
+        if "identify 5 primary direct competitors" in competitor.lower():
+            result.error("competitor-analysis still hard-stops discovery at 5 competitors")
+        if "not a complete MRD/market-analysis stage" not in competitor:
+            result.error("competitor-analysis missing leaf-skill boundary")
+
+    prd_template_path = os.path.join(plugin_dir, "skills", "create-prd", "SKILL.md")
+    if os.path.isfile(prd_template_path):
+        prd_template = Path(prd_template_path).read_text(encoding="utf-8")
+        if "not the complete Stage" not in prd_template:
+            result.error("create-prd missing template-vs-stage boundary")
+
+    if result.ok:
+        result.note("Deep Research contract, dual gates, routes, and leaf boundaries present")
+    return result
+
+
 # ─── Main Validator ──────────────────────────────────────────────────────────
 
 def validate_plugin(plugin_dir: str) -> dict:
@@ -333,6 +416,9 @@ def validate_plugin(plugin_dir: str) -> dict:
     results["sections"]["skills"] = skill_results
     results["skill_count"] = len(skill_names)
 
+    # Internal capabilities are full methodology files routed by the main skill,
+    # but are intentionally outside the top-level skills directory so they do
+    # not flood the user-facing skill picker.
     internal_capability_dir = os.path.join(skills_dir, "main", "references", "capabilities")
     internal_capability_names = []
     if os.path.isdir(internal_capability_dir):
@@ -361,6 +447,9 @@ def validate_plugin(plugin_dir: str) -> dict:
     results["sections"]["cross-refs"] = validate_cross_references(
         plugin_dir, skill_names, internal_capability_names
     )
+
+    # 6. Deep Research contract and stage routing
+    results["sections"]["deep-research"] = validate_deep_research_contract(plugin_dir)
 
     return results
 
@@ -452,6 +541,12 @@ def print_report(all_results: list[dict]):
         if xrefs.errors or xrefs.warnings:
             print(f"  {C.BOLD}Cross-references:{C.RESET}")
             print_validation_result("cross-refs", xrefs)
+
+        # Deep Research contract
+        deep_research = plugin["sections"]["deep-research"]
+        if deep_research.errors or deep_research.warnings:
+            print(f"  {C.BOLD}Deep Research contract:{C.RESET}")
+            print_validation_result("deep-research", deep_research)
 
         print(f"{C.CYAN}└{'─'*69}{C.RESET}\n")
 

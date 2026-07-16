@@ -47,20 +47,22 @@ next: strategy              # 下一步该跑的阶段 key
 open_risks:
   - "家长付费意愿未一手验证"
 stages:
-  market-analysis: { status: done,    artifact: 01-市场分析.md, gate: passed }
-  insight:         { status: done,    artifact: 02-需求洞察.md, gate: passed }
-  strategy:        { status: pending, artifact: null,          gate: null }
-  prd:             { status: pending, artifact: null,          gate: null }
-  wireframe:       { status: pending, artifact: null,          gate: null }
-  stories:         { status: pending, artifact: null,          gate: null }
-  tech-design:     { status: pending, artifact: null,          gate: null }
-  test:            { status: pending, artifact: null,          gate: null }
-  launch:          { status: pending, artifact: null,          gate: null }
-  data:            { status: pending, artifact: null,          gate: null }
+  market-analysis: { status: done,    artifact: 01-市场分析.md, research_gate: pass-strong, decision_gate: passed }
+  insight:         { status: done,    artifact: 02-需求洞察.md, research_gate: pass-with-gaps, decision_gate: passed }
+  strategy:        { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  prd:             { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  wireframe:       { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  stories:         { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  tech-design:     { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  test:            { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  launch:          { status: pending, artifact: null,          research_gate: null, decision_gate: null }
+  data:            { status: pending, artifact: null,          research_gate: null, decision_gate: null }
 ```
 
 - `status`: `pending` | `in-progress` | `done`
-- `gate`: `null`（未拍板）| `draft`（草案跑通，未正式拍板）| `passed`（用户放行）| `revise`（要回去补）| `pivot`（改方向）
+- `research_gate`: `null` | `pass-strong` | `pass-emerging` | `pass-with-gaps` | `revise` | `blocked`。定义见 [`Deep Research Contract`](../contracts/deep-research-contract.md)。依赖外部事实的阶段必须先过此门。
+- `decision_gate`: `null`（未拍板）| `draft`（草案跑通，未正式拍板）| `passed`（用户放行）| `revise`（用户要求补）| `pivot`（改方向）。
+- 兼容旧台账：旧字段 `gate` 只可迁移为 `decision_gate`，绝不能推断 `research_gate` 已通过。
 - **台账与磁盘以磁盘为准**：台账缺失/过期时，扫 `_runs/<项目>/*`（含 `.md` 与 `.html`），按上表**关键词**（文件名或首行标题）反推阶段；识别不了的就**问用户**，不硬猜（§9 不假装）。
 - **前缀=运行序号**：文件名数字前缀只表先后、允许同阶段多份，**绝不**当阶段号用。
 - **同阶段多产物 → 最新为准**：取序号最大的那份作为该阶段当前产物（`status: done`），可在备注记迭代次数。
@@ -81,7 +83,10 @@ stages:
 
 ## 守门规则
 
-1. 某阶段产物已存在但 `gate: null` → **先把该阶段的"风险结论"摘给用户、请他拍板**，再决定 `next`，绝不自动连跑。
-2. 依赖未满足（如想跑④但③还没 done）→ 提示先补上游，不硬拦也不替他改需求（§0b）。
-3. 闭环：⑪ 完成后，`next` 指回 ②（带上⑪的指标作为新输入）。
-4. 每次输出结尾，给一行明确的「下一步敲什么」。
+1. 依赖外部事实的阶段先检查 `research_gate`。`revise` → 生成delta-query回退补搜；`blocked` → 报告决策缺口并转一手研究/POC；未过研究门不得仅凭文档存在标`done`。
+2. `pass-emerging/pass-with-gaps` 可交付，但必须把证据等级、未知与验证要求传给下游；不得静默升级为事实。
+3. 某阶段产物已存在但 `decision_gate: null` → **先把该阶段的"风险结论"摘给用户、请他拍板**，再决定 `next`，绝不自动连跑。
+4. 下游继承前检查上游研究新鲜度。新增事实、过期事实、承重事实做增量复核；“继承”不等于免检。
+5. 依赖未满足（如想跑④但③还没 done）→ 提示先补上游，不硬拦也不替他改需求（§0b）。
+6. 闭环：⑪ 完成后，`next` 指回 ②（带上⑪的指标作为新输入）。
+7. 每次输出结尾，给一行明确的「下一步敲什么」。

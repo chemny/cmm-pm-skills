@@ -15,6 +15,7 @@ Stage ⑦ of the full pipeline (after ⑥ stories / before engineering builds). 
 > **Inherit, don't invent (§0b/§9).** Architecture serves the PRD's features + the UI spec's flows; don't design for requirements that don't exist.
 > **Collaborate (§0a/§0c).** Key technical decisions (stack, build/buy, the spike resolution) are presented with options + a recommendation; **the user/team decides**. Surface risks, bring solutions.
 > **Follow [`CONVENTIONS.md`](../CONVENTIONS.md)**.
+> **Research gate (mandatory):** Read and execute [`Deep Research Contract`](../skills/main/references/contracts/deep-research-contract.md) at `standard` or `full` intensity. Model/API/provider selection requires a technical research ledger, current official docs, a converged candidate set, and a uniform POC plan. Without POC, output a researched shortlist—not a final validated selection.
 
 ## Step 1 — Inherit & frame
 Pull from ④PRD (features, non-functional bars), ⑤UI spec (flows/screens), ⑥backlog (esp. the `?(spike)` items). Restate the **technical problems to solve** — including each spike.
@@ -24,6 +25,7 @@ For **every spike-gated item** in the backlog, produce a concrete technical appr
 - **Don't overclaim resolution.** A spike is *resolved* only with a **buildable approach + a defined validation**. If it's only directional, say "方向已给，仍需设计 spike" — don't mark it estimable when it isn't.
 - **Naming ≠ designing.** A core component/engine isn't designed by naming it — **specify its actual logic/algorithm** (how the routing decides, how the profile is extracted, how the detection works) or flag that logic as a sub-spike.
 - **Flag the unknowns the design itself introduces.** A chosen approach usually creates its own new hard problem — surface it, don't let it hide.
+- **Provider/model taxonomy:** distinguish open model, hosted API provider, product's proprietary model, and local runtime. Never compare or price them as if they were the same layer.
 
 ## Step 3 — Design (coverage)
 Cover: tech stack, architecture, data model, key decisions, interfaces, non-functional implementation, risks. Don't skip a layer.
@@ -55,6 +57,7 @@ Save as markdown. Use Mermaid for architecture/data-flow; **render diagrams to a
 ## Step 5 — Review
 - 多角色红队（§8），尤其落地工程师视角："这方案真能建吗?哪里还虚?"。
 - 下一步：把解决了 spike 的 backlog 回填估算 → `/sprint`；或 `/write-stories` 补拆 spike 解决后的子故事。
+- Gate result must say whether the shortlist is `pass-strong`, `pass-emerging`, or `pass-with-gaps`; any provider requiring latency/accuracy verification remains 〔待 POC〕 and cannot be called final.
 
 ## Conventions
 - 架构/数据流用 Mermaid（`flowchart`/`graph`），并产一份渲染好的 HTML（别只丢 .md）。

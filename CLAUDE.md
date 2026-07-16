@@ -21,7 +21,7 @@ cmm-pm-skills/                       <- repo root (marketplace)
 ├── AGENTS.md                        <- pointer to CLAUDE.md (for non-Claude agents)
 ├── CONVENTIONS.md                   <- master discipline (edit here, then sync)
 ├── PIPELINE.md                      <- full-pipeline overview
-├── README.md / README.en.md         <- public documentation (GitHub)
+├── README.md / README.zh.md         <- public documentation (GitHub)
 ├── LICENSE                          <- MIT
 ├── sync_conventions.sh              <- copy master CONVENTIONS into the plugin
 ├── validate_plugins.py              <- plugin validator

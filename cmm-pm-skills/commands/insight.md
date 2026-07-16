@@ -16,6 +16,7 @@ Stage ② of the pipeline. It answers: **what does the user really need — and 
 > **Collaborate + don't block (CONVENTIONS §0c).** Confirm core framing (the need statement, the target) **with the user**, don't autopilot. Grade evidence honestly and flag what's unvalidated, but **if the user has decided to proceed, help them — surface risks, never refuse or stall the pipeline.** The decision is theirs.
 > **Do your OWN research — don't just expand ①.** Inheriting ①'s persona ≠ skipping fresh fact-checking. This stage must run its own searches for need evidence (real user complaints/reviews, ToB pricing/payment signals, how rivals' users actually behave), **triangulate (≥3 sources/≥2 classes), and loop back to fill gaps** (CONVENTIONS §4/§8). Expanding the upstream report without new verification is a fail.
 > **Follow [`CONVENTIONS.md`](../CONVENTIONS.md)** for all cross-cutting discipline (how to ask, plain language, depth, honesty, methodology-backstage, red-team). This command adds only the **insight-specific** logic.
+> **Research gate (mandatory):** Read and execute [`Deep Research Contract`](../skills/main/references/contracts/deep-research-contract.md) at `standard` or `full` intensity. This stage needs its own incremental ledger and fresh need-evidence searches; inheriting ① never counts as a passed research gate by itself.
 
 ## Step 1 — Frame the real job (JTBD)
 - The functional job + the emotional/social job. Not the feature — the job.
@@ -72,6 +73,7 @@ Save as markdown. Use result-oriented headings, no framework jargon:
 ## 一手验证计划                      访谈(Mom Test)/行为信号/实验 + 成功阈值
 ## 结论                              默认「强假设·未验证」；写清"验证到什么程度才可 GO / PIVOT / KILL"
 ## 定位假设（给 PRD，标注"待验证"）  为[人群]的[任务]，提供[价值]——不同于[替代]，因为[理由]
+## 研究状态                         Research Gate + 证据成熟度 + 下游不得升级的未知
 ```
 
 ## Next Steps
