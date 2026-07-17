@@ -10,7 +10,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 **Every command/skill must follow [`CONVENTIONS.md`](CONVENTIONS.md)** — the repo-wide, product-agnostic work discipline: §0 top principle (truth > completeness), how to ask for inputs (Class A/B, echo-then-request, plain language, no popup), atomic keyword integrity, classify competitors by category, search-engine + source-tier discipline, depth bar, objectivity (risk + opportunity, giants ≠ kill), methodology-stays-backstage, no-fabrication, segment-not-aggregate, and a pre-delivery provenance/red-team check. Individual commands only encode their **stage-specific** logic and inherit the rest — do not re-write these rules per command.
 
-**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because a plugin installs by directory, the root file does NOT ship with it — so the plugin carries a **synced copy** at `cmm-pm-skills/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `./sync_conventions.sh`** to propagate.
+**Distribution (important):** the repo-root `CONVENTIONS.md` is the **master (edit only here)**. Because a plugin installs by directory, the root file does NOT ship with it — so the plugin carries a **synced copy** at `cmm-pm-skills/CONVENTIONS.md`, and commands point to `../CONVENTIONS.md` (plugin-local). **After editing the master, run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows.** The Bash wrapper remains available on POSIX systems.
 
 ## Repo Structure
 
@@ -23,7 +23,8 @@ cmm-pm-skills/                       <- repo root (marketplace)
 ├── PIPELINE.md                      <- full-pipeline overview
 ├── README.md / README.zh.md         <- public documentation (GitHub)
 ├── LICENSE                          <- MIT
-├── sync_conventions.sh              <- copy master CONVENTIONS into the plugin
+├── sync_conventions.py              <- cross-platform master CONVENTIONS sync
+├── sync_conventions.sh              <- optional POSIX wrapper
 ├── validate_plugins.py              <- plugin validator
 ├── _design/                         <- methodology blueprints / checklists
 ├── _runs/                           <- end-to-end examples (+ per-project _state.yaml)
@@ -82,11 +83,11 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 ## Operational Procedures
 
 ### After editing CONVENTIONS.md (the master)
-- Run `./sync_conventions.sh` to copy it into the plugin (`cmm-pm-skills/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
+- Run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows to copy it into the plugin (`cmm-pm-skills/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
 
 ### After any skill/command change
-1. Run `python3 validate_plugins.py` from the repo root to check all plugins.
-2. Run `python3 generate_catalog.py` to refresh `CATALOG.md` (component counts auto-update there — single source of truth for "what's in the suite").
+1. Run `python3 validate_plugins.py` from the repo root to check all plugins (`py -3 validate_plugins.py` on Windows).
+2. Run `python3 generate_catalog.py` to refresh `CATALOG.md` (`py -3 generate_catalog.py` on Windows; component counts auto-update there — single source of truth for "what's in the suite").
 3. If skills/commands were added or removed, update the counts in `README.md` and the `marketplace.json` description to match `CATALOG.md`.
 4. Bump versions across all manifests (see Versioning).
 

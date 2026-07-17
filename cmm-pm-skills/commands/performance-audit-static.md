@@ -54,7 +54,7 @@ Performance Audit: [scope]
   - Expected effect: <e.g. payload size, query time, load time>
 ```
 
-End with what's already efficient (say it explicitly) and what needs runtime profiling to confirm. Optionally write the report to `/reports/performance_audit_{timestamp}.md`.
+End with what's already efficient (say it explicitly) and what needs runtime profiling to confirm. Optionally write the report to the project-relative path `reports/performance_audit_{timestamp}.md`.
 
 ## Notes
 

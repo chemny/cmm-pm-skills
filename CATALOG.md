@@ -1,6 +1,6 @@
 # CATALOG — cmm-pm-skills 组件全表
 
-> 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后重跑 `python3 generate_catalog.py`。
+> 本文件由 `generate_catalog.py` 自动生成，**请勿手改**。改了命令/技能后，macOS/Linux 重跑 `python3 generate_catalog.py`，Windows 运行 `py -3 generate_catalog.py`。
 
 **总览**：插件 `cmm-pm-skills` ｜ 命令 46 ｜ 一级技能 13 ｜ 内部能力 58 ｜ 合计 117 个组件。
 

@@ -43,7 +43,7 @@ Authorization, data access, session/identity, and input→output encoding. Compa
 
 ### 3. Cross-reference intended vs. implemented
 
-Apply the **intended-vs-implemented** skill against `/documentation/*.md`. A rule documented but not enforced in code is a finding on its own. If the docs are absent, note it and recommend `/document-app` first — an intent audit needs intent on record.
+Apply the **intended-vs-implemented** skill against the project-relative `documentation/*.md` set. A rule documented but not enforced in code is a finding on its own. If the docs are absent, note it and recommend `/document-app` first — an intent audit needs intent on record.
 
 ### 4. Self-refute every candidate
 
@@ -83,7 +83,7 @@ Security Audit: [scope]
      Solution: <concrete code change>
 ```
 
-End with: the root-cause theme across findings; **what is well-built — say it explicitly**; and what you could not verify and the user should double-check. Optionally write the report to `/reports/security_audit_{timestamp}.md`.
+End with: the root-cause theme across findings; **what is well-built — say it explicitly**; and what you could not verify and the user should double-check. Optionally write the report to the project-relative path `reports/security_audit_{timestamp}.md`.
 
 ## Notes
 

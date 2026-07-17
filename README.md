@@ -93,7 +93,8 @@ _runs/natgeo-video/  — an "English-article-to-video learning tool": market ana
 cmm-pm-skills/
 ├── CONVENTIONS.md          shared discipline (master)
 ├── PIPELINE.md             full-pipeline overview
-├── sync_conventions.sh     master → plugin sync
+├── sync_conventions.py     cross-platform master → plugin sync
+├── sync_conventions.sh     optional POSIX wrapper
 ├── validate_plugins.py     contract validation
 ├── cmm-pm-skills/          single plugin (46 commands + 13 visible skills + 58 internal capabilities)
 ├── _design/                methodology blueprints / checklists
@@ -105,6 +106,7 @@ cmm-pm-skills/
 - Claude Code or Codex CLI;
 - Some commands need web search (market / competitor research);
 - Optional: GitHub CLI (`gh`) for publishing.
+- Maintainers only: Python 3 for validation, catalog generation, and conventions sync. Windows can use the `py -3` launcher.
 
 ## License
 

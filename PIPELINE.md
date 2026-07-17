@@ -1,7 +1,7 @@
 # cmm-pm-skills · 流水线总览
 
 > 一套**产品经理工作流** skills：从市场到落地的端到端链路。
-> 核心纪律统一在根目录 **`CONVENTIONS.md`**（母版），每个插件内置同步副本，安装即继承。改母版后跑 `./sync_conventions.sh`。
+> 核心纪律统一在根目录 **`CONVENTIONS.md`**（母版），每个插件内置同步副本，安装即继承。改母版后，macOS/Linux 运行 `python3 sync_conventions.py`，Windows 运行 `py -3 sync_conventions.py`。
 
 ## 总协同（站在所有阶段之上）
 
@@ -34,6 +34,6 @@
 - 每个阶段结尾给"风险结论"，**做不做由用户决定**。
 
 ## 维护
-- 改纪律 → 只编辑根 `CONVENTIONS.md` → 跑 `./sync_conventions.sh` 同步 9 插件。
-- 改命令/技能 → 跑 `python3 validate_plugins.py` 校验契约。
+- 改纪律 → 只编辑根 `CONVENTIONS.md` → macOS/Linux 运行 `python3 sync_conventions.py`，Windows 运行 `py -3 sync_conventions.py`。
+- 改命令/技能 → macOS/Linux 运行 `python3 validate_plugins.py`，Windows 运行 `py -3 validate_plugins.py`。
 - 设计蓝图见 `_design/`；端到端示例见 `_runs/voice-ime/`（sayit 产品全链路）。

@@ -29,7 +29,7 @@ Audit **$ARGUMENTS**. If empty, document the whole repository, prioritizing back
 
 ### Step 2: Reverse-Engineer the Docs
 
-Apply the **shipping-artifacts** skill. Reading the code as the source of truth, produce the applicable documents in `/documentation/`.
+Apply the **shipping-artifacts** skill. Reading the code as the source of truth, produce the applicable documents in the project-relative `documentation/` directory.
 
 **Core (always):**
 

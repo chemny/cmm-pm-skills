@@ -14,7 +14,9 @@
 - Skill `name` must match its directory name.
 - No cross-plugin references in commands. Suggest follow-ups in natural language only.
 - Every contributor will be listed publicly.
-- Run the validator before submitting: `python3 validate_plugins.py`
+- Python 3 is required for repository maintenance scripts (not for using the installed skills).
+- Run the validator before submitting: `python3 validate_plugins.py` on macOS/Linux or `py -3 validate_plugins.py` on Windows.
+- After editing the master `CONVENTIONS.md`, run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows.
 
 ## License
 

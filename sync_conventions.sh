@@ -4,10 +4,4 @@
 # 用法：改完根目录 CONVENTIONS.md 后，跑一次本脚本同步进插件。
 set -e
 cd "$(dirname "$0")"
-count=0
-for d in cmm-pm-skills/; do
-  cp CONVENTIONS.md "${d}CONVENTIONS.md"
-  echo "synced -> ${d}CONVENTIONS.md"
-  count=$((count+1))
-done
-echo "完成：已同步到 $count 个插件。"
+exec python3 sync_conventions.py
