@@ -16,7 +16,7 @@
 - Every contributor will be listed publicly.
 - Python 3 is required for repository maintenance scripts (not for using the installed skills).
 - Run the validator before submitting: `python3 validate_plugins.py` on macOS/Linux or `py -3 validate_plugins.py` on Windows.
-- After editing the master `CONVENTIONS.md`, run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows.
+- After editing the master `CONVENTIONS.md` or any file under `cmm-pm-skills/commands/`, run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows. This refreshes the skill-only runtime fallback.
 
 ## License
 

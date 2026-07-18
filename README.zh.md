@@ -48,7 +48,7 @@ cmm-pm-skills 是一个面向产品经理、创始人、独立开发者和 Agent
 把下面这句话发给你当前使用的 Agent，让它自行判断客户端、安装并验证：
 
 ```text
-请为我当前使用的 Agent 客户端安装 https://github.com/chemny/cmm-pm-skills。自动判断正确的插件或 Skill 目录，完成安装，并验证 CMM PM Skills: Main 可以被发现，最后报告结果。
+请为我当前使用的 Agent 客户端安装 https://github.com/chemny/cmm-pm-skills 的完整插件包，不要只安装某一个 `skills/` 子目录。自动判断正确的插件位置，完成安装，并验证 CMM PM Skills: Main 可以读取内置的 `references/CONVENTIONS.md`、`references/commands/market-analysis.md` 和 `references/commands/write-prd.md`，最后报告结果。
 ```
 
 ## 快速开始
@@ -67,6 +67,8 @@ Claude Code：/cmm-pm-skills
 按你说的直接动手；每个阶段结尾给风险结论、由你拍板再进下一步。
 不用看说明书。老手也可直接敲单个命令，如 /write-prd 你的想法。
 ```
+
+`main` Skill 同时在自身 `references/` 中内置了阶段规则和统一纪律。即使某个宿主只安装 Skills 层、没有按完整插件安装，完整流程也不会悄悄降级成叶子模板。
 
 ## 使用示例
 
@@ -96,7 +98,9 @@ cmm-pm-skills/
 ├── sync_conventions.py     跨平台母版→插件同步
 ├── sync_conventions.sh     可选 POSIX 包装脚本
 ├── validate_plugins.py     契约校验
-├── cmm-pm-skills/          单插件（46 命令 + 13 个一级技能 + 58 个内部能力）
+├── cmm-pm-skills/          单插件（Codex + Claude 双清单）
+│   ├── commands/           46 个原生阶段命令
+│   └── skills/             13 个一级 Skills；main 内置阶段命令兜底
 ├── _design/                方法论蓝图 / 清单
 └── _runs/                  端到端示例
 ```

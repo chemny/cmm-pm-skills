@@ -48,7 +48,7 @@ Compatible with Claude Code, Codex, and OpenClaw. Claude Code exposes commands a
 Ask your current Agent to install and verify the repository for the client you are using:
 
 ```text
-Install https://github.com/chemny/cmm-pm-skills for my current Agent client. Detect the correct plugin or skill location, install the suite, verify that CMM PM Skills: Main is discoverable, and report the result.
+Install the complete plugin package at https://github.com/chemny/cmm-pm-skills for my current Agent client. Do not install only an individual `skills/` subfolder. Detect the correct plugin location, install the suite, and verify that CMM PM Skills: Main can read its bundled `references/CONVENTIONS.md`, `references/commands/market-analysis.md`, and `references/commands/write-prd.md`. Then report the result.
 ```
 
 ## Quick Start
@@ -67,6 +67,8 @@ It asks how you want to start (run the whole pipeline, or just one stage like a 
 then gets to work; each stage ends with a risk verdict for you to approve before moving on.
 No manual needed. Power users can also call a single command directly, e.g. /write-prd your idea.
 ```
+
+The `main` skill also bundles the stage rules and conventions under its own `references/` directory. If a host installs only the Skills layer instead of the complete plugin, the full workflow remains available rather than silently degrading to leaf templates.
 
 ## Usage Examples
 
@@ -96,7 +98,9 @@ cmm-pm-skills/
 ├── sync_conventions.py     cross-platform master → plugin sync
 ├── sync_conventions.sh     optional POSIX wrapper
 ├── validate_plugins.py     contract validation
-├── cmm-pm-skills/          single plugin (46 commands + 13 visible skills + 58 internal capabilities)
+├── cmm-pm-skills/          single plugin (Codex + Claude manifests)
+│   ├── commands/           46 native stage commands
+│   └── skills/             13 visible skills; main also bundles the stage-command fallback
 ├── _design/                methodology blueprints / checklists
 └── _runs/                  end-to-end examples
 ```

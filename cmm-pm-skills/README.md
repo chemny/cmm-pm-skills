@@ -8,12 +8,14 @@
 
 ## Install / 安装
 
+Install this directory as a complete plugin package. It includes both `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json`; do not copy only one leaf skill when you need the full workflow.
+
 ```bash
 claude plugin marketplace add chemny/cmm-pm-skills
 claude plugin install cmm-pm-skills@cmm-pm-skills
 ```
 
-安装后开一个新的 Agent 会话，让它重新扫描插件。
+安装后开一个新的 Agent 会话，让它重新扫描插件。如果宿主只能安装 Skills，`main/references/` 也内置了完整纪律与 46 个阶段命令作为兜底。
 
 ## Command / 命令
 

@@ -23,7 +23,7 @@ cmm-pm-skills/                       <- repo root (marketplace)
 ├── PIPELINE.md                      <- full-pipeline overview
 ├── README.md / README.zh.md         <- public documentation (GitHub)
 ├── LICENSE                          <- MIT
-├── sync_conventions.py              <- cross-platform master CONVENTIONS sync
+├── sync_conventions.py              <- cross-platform runtime-resource sync
 ├── sync_conventions.sh              <- optional POSIX wrapper
 ├── validate_plugins.py              <- plugin validator
 ├── _design/                         <- methodology blueprints / checklists
@@ -82,8 +82,8 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 
 ## Operational Procedures
 
-### After editing CONVENTIONS.md (the master)
-- Run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows to copy it into the plugin (`cmm-pm-skills/CONVENTIONS.md`), so the installed plugin stays self-contained. Never hand-edit the plugin's copy — edit the master and sync.
+### After editing CONVENTIONS.md or any command
+- Run `python3 sync_conventions.py` on macOS/Linux or `py -3 sync_conventions.py` on Windows. It updates the plugin-root conventions and the skill-only fallback under `skills/main/references/` (conventions + all stage commands). Never hand-edit generated fallback copies.
 
 ### After any skill/command change
 1. Run `python3 validate_plugins.py` from the repo root to check all plugins (`py -3 validate_plugins.py` on Windows).
